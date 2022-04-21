@@ -9,11 +9,8 @@ type ButtonProps = {
     image?: any
 }
 
-
-
-
 export const Button = ({onClick, text, disabled, className, image}: ButtonProps) => {
     return (
-        <button type='button' className={className} disabled={disabled}  onClick={onClick }>{text}<img src={image}/></button>
+        <button type='button' className={className} disabled={disabled}  onClick={onClick }>{image && <img src={image}/>}{text}</button>
     )
 }

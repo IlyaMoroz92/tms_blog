@@ -109,7 +109,3 @@ button {
     color: white;
     background: #FD3419;
 }
-
-.likeUp:before {
-    content: url(../Button/img/Path3.png);
-}
