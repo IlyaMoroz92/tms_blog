@@ -1,0 +1,21 @@
+.mainDivPostCardMicro {
+    border-bottom: 2px solid #DADADA;
+    max-width: 400px;
+    margin-top: 35px;
+    padding-bottom: 35px;
+}
+
+.mainContentPostCardMicro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titlePostCardMicro {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.titlePostCardMicro:hover {
+    color: #2231AA;
+    cursor: pointer;
+}

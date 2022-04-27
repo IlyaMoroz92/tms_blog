@@ -1,5 +1,5 @@
-button {
-    margin: 10px
+.button {
+    margin-right: 15px
 }
 
 .primary {  
@@ -36,11 +36,6 @@ button {
     background: #DADADA
 }
 
-.secondary:before {
-    /* content: url(../Button/power-on.png); */
-}
-
-
 .secondary2 {
     font-weight: 600;
     color: #FD3419;;
@@ -57,7 +52,7 @@ button {
     border: 2px solid #E5E5E5;
 }
 
-.bvi {
+.buttonWithIcon {
     font-weight: 600;
     color: #313037;
     background: #E8E8E8;
@@ -69,7 +64,7 @@ button {
     border: none;
 }
 
-.bvi:hover {
+.buttonWithIcon:hover {
     color: white;
     background: #5360CD
 }

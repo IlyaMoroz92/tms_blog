@@ -1,4 +1,3 @@
-/* import React from 'react' */
 import './Button.css'
 
 type ButtonProps = {
@@ -6,11 +5,11 @@ type ButtonProps = {
     onClick: () => void
     className: string
     disabled: boolean
-    image?: any
+    image?: string
 }
 
 export const Button = ({onClick, text, disabled, className, image}: ButtonProps) => {
     return (
-        <button type='button' className={className} disabled={disabled}  onClick={onClick }>{image && <img src={image}/>}{text}</button>
+        <button type='button' className={className} disabled={disabled} onClick={onClick }>{image && <img src={image}/>}{text}</button>
     )
 }
