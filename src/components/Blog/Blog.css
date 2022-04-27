@@ -1,0 +1,20 @@
+.pBlog {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.navBlog {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.spanBlog {
+    margin-right: 10%;
+    cursor: pointer;
+}
+
+.mainDivBlog {
+    border-bottom: 2px solid #DADADA;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+}

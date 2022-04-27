@@ -1,0 +1,18 @@
+.mainDivPostCardMin {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    border-bottom: 2px solid #DADADA;
+    padding: 20px 0;
+    max-width: 352px;
+}
+
+.titlePostCardMin {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.titlePostCardMin:hover {
+    color: #2231AA;
+    cursor: pointer;
+}

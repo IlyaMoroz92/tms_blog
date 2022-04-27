@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+.mainDivHeader {
+    background-color: #2231AA;
+    display: flex;
+    justify-content: space-between;
+    line-height: 84px;
+    height: 84px;
+}
+
+.buttonHeader {
+    border: none;
+    background-color: inherit;
+    width: 84px;
+    height: 84px;
+}
+
+.buttonSearch {
+    width: 282px;
+    display: flex;
+}
+
+.spanAbbr {
+    padding: 14px;
+    margin: 0 15px;
+    height: 24px;
+    background-color: #5360CD;
+}
+.headerName {
+    color: white;
+}
+
+.burger {
+    border-right: 1px solid #5360CD;
+    cursor: pointer;
+}
+
+.search {
+    border-right: 1px solid #5360CD;
+    border-left: 1px solid #5360CD;
+    cursor: pointer;
+}

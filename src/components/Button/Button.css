@@ -1,0 +1,106 @@
+.button {
+    margin-right: 15px
+}
+
+.primary {  
+    font-weight: 600;
+    color: white;
+    background: #2231AA;
+    width: 132px;
+    height: 56px;
+    cursor: pointer;
+    padding: 16px 32px;
+    border-radius: 2px;
+    font-size: 18px;
+    border: none;
+}
+
+.primary:hover {
+    background: #5360CD
+}
+
+
+.secondary {
+    font-weight: 600;
+    color: black;
+    background: #E8E8E8;
+    border-radius: 2px;
+    width: 159px;
+    height: 56px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+}
+
+.secondary:hover {
+    background: #DADADA
+}
+
+.secondary2 {
+    font-weight: 600;
+    color: #FD3419;;
+    background: white;
+    border-radius: 2px;
+    width: 159px;
+    height: 56px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+}
+
+.secondary2:hover {
+    border: 2px solid #E5E5E5;
+}
+
+.buttonWithIcon {
+    font-weight: 600;
+    color: #313037;
+    background: #E8E8E8;
+    border-radius: 2px;
+    width: 241px;
+    height: 56px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+}
+
+.buttonWithIcon:hover {
+    color: white;
+    background: #5360CD
+}
+
+
+.likeDown {
+    color: white;
+    background: #E8E8E8;
+    border-radius: 2px;
+    width: 88px;
+    height: 56px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+}
+
+
+
+.likeUp {
+    color: white;
+    background: #E8E8E8;
+    border-radius: 2px;
+    width: 88px;
+    height: 56px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+}
+
+
+.likeUp:hover {
+    color: white;
+    background: #5360CD;
+}
+
+.likeDown:hover {
+    color: white;
+    background: #FD3419;
+}

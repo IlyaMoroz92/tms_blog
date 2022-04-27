@@ -1,0 +1,17 @@
+.divLikes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttonLike {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.buttonLikeUp {
+    max-width: 100px;
+}
+
