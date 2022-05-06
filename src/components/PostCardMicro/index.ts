@@ -1,0 +1,1 @@
+export { PostCardMicro} from './PostCardMicro'

@@ -1,5 +1,5 @@
 /* import React from 'react' */
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './Input.css'
 
 type InputProps = {
@@ -27,10 +27,14 @@ export const Input = (props: InputProps) => {
             setRed('blue')
         }
     }
+    const inputRef = useRef<HTMLInputElement | null>(null)
+    
+    inputRef.current?.focus()
+    console.log(inputRef)
     return (
-        <div className={props.className} > {props.text}
+        <div className={props.className}> {props.text}
             <label htmlFor="" >{props.label}
-                <input className= {props.classNameInput} style={{borderColor: style, }} type={props.type} onChange={handleChange} placeholder={props.placeholder} disabled={props.disabled}/>
+                <input className= {props.classNameInput} style={{borderColor: style}} type={props.type} onChange={handleChange} placeholder={props.placeholder} disabled={props.disabled}/>
                 {error && <label className="error">{error}</label>}
             </label>
         </div>

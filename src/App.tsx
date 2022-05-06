@@ -1,27 +1,31 @@
 import React from 'react';
 import './App.css'
-import { Button } from './components/Button/Button'
-import { Input } from './components/Input/Input'
-import { Textarea } from './components/Textarea/Textarea'
-import { Likes } from './components/Likes/Likes'
-import { Article } from './components/Article/Article'
-import { Picture } from './components/Picture/Picture'
-import { Date } from './components/Date/Date'
-import { Title } from './components/Title/Title'
-import { PostCard } from './components/PostCard/PostCard'
-import { PostCardMin } from './components/PostCardMin/PostCardMin'
-import { PostCardMicro } from './components/PostCardMicro/PostCardMicro'
-import { Header } from './components/Header/Header'
-import { Blog } from './components/Blog/Blog'
-import { Footer } from './components/Footer/Footer'
-import { Pages } from './components/Pages/Pages'
-import { PostList } from './components/PostList/PostList'
+import { Button } from './components/Button'
+import { Input } from './components/Input'
+import { Textarea } from './components/Textarea'
+import { PostList } from './components/PostList'
+import { PostCard } from './components/PostCard'
+import { LogIn } from './components/LogIn'
+import { LoginFunc } from './components/LoginFunc'
+/* import { InputNew } from './components/InputNew/InputNew' */
 
 
 import IconBlack from '../src/components/Button/img/IconBlack.svg'
 import LikeDownBlack from '../src/components/Button/img/LikeDownBlack.svg'
 import LikeUpBlack from '../src/components/Button/img/LikeUpBlack.svg'
 
+
+
+
+const cards = [
+  {
+      id: 1,
+      title: 'Astronauts prep for new solar arrays on nearly seven-hour spacewalk ...',
+      description: 'Astronauts Kayla Barron and Raja Chari floated out of the International Space Station airlock for a spacewalk Tuesday, installing brackets and struts to support new solar arrays to upgrade the research lab’s power system on the same day that crewmate Mark Vande Hei marked his 341st day in orbit, a U.S. record for a single spaceflight.',
+      imageUrl: 'https://s3-alpha-sig.figma.com/img/52f9/5dda/fe2406480a136180247e955f197ca67e?Expires=1652054400&Signature=Iy~SAIDzclA5fWDcIL16GAbiux8fI0ubDMmfaWlQgZc5dQcOesWbmaAKU8ZZzLxUkx-G9m-TbEMxVtrEpE7mODIzyKiPSH~FVzX0-thG4c4Au2ui9Jtxdeob4OrF9M2tRriSoYIIVa8a7XFI-oaCVPjF1-c08bvYJTgfE5r7nDLjbD4KcgL8EnEG~nWfnoF8fMjKL-sJmoGATaSgLAc~KgT19VNpHTS82TCGoX-V0W0OkTIK8Rz-~CkHf1zBuSt5fzLEGIaGCbMeruUm6MSR7xiht1hrL9DuqxdHa8tYUH-mODts6L182QCRxZKndPB6oi0HnL9IQ2K0DCYEAPQ4Ag__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
+  },
+  {}
+]
 
 
 function App() {
@@ -41,6 +45,11 @@ function App() {
       </div>
 
       <PostList/>
+      {/* <LogIn/> */}
+      {/* <InputNew/> */}
+
+
+      <PostCard/>
     </div>
   )
 }

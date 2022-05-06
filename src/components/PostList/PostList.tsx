@@ -9,6 +9,7 @@ import { Footer } from '../Footer/Footer'
 
 type PostListProps = {
     className?: string
+    
 }
 
 export const PostList = (props: PostListProps) => {
@@ -18,17 +19,17 @@ export const PostList = (props: PostListProps) => {
             <div className="wrapperPostList">
                 <Blog/>
                 <div className="contentPostList">
-                    <div className="oneGridPostList"><PostCard/></div>
-                    <div className="twoGridPostList"><PostCardMin/></div>
-                    <div className="threeGridPostList"><PostCardMin/></div>
-                    <div className="fourGridPostList"><PostCardMin/></div>
-                    <div className="fiveGridPostList"><PostCardMin/></div>
-                    <div className="sixGridPostList"><PostCardMicro/></div>
-                    <div className="sevenGridPostList"><PostCardMicro/></div>
-                    <div className="eightGridPostList"><PostCardMicro/></div>
-                    <div className="nineGridPostList"><PostCardMicro/></div>
-                    <div className="tenGridPostList"><PostCardMicro/></div>
-                    <div className="elevenGridPostList"><PostCardMicro/></div>
+                    <div className="oneGridPostList relative"><PostCard/></div>
+                    <div className="twoGridPostList relative"><PostCardMin/></div>
+                    <div className="threeGridPostList relative"><PostCardMin/></div>
+                    <div className="fourGridPostList relative"><PostCardMin/></div>
+                    <div className="fiveGridPostList relative"><PostCardMin/></div>
+                    <div className="sixGridPostList relative"><PostCardMicro/></div>
+                    <div className="sevenGridPostList relative"><PostCardMicro/></div>
+                    <div className="eightGridPostList relative"><PostCardMicro/></div>
+                    <div className="nineGridPostList relative"><PostCardMicro/></div>
+                    <div className="tenGridPostList relative"><PostCardMicro/></div>
+                    <div className="elevenGridPostList relative"><PostCardMicro/></div>
                 </div>
                 <Pages/>
                 <Footer/>

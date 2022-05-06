@@ -1,0 +1,7 @@
+.picture__img {
+    width: 256px;
+}
+
+.picture__img img{
+    width: 100%;
+}

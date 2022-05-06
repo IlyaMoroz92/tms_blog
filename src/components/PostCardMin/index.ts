@@ -1,0 +1,1 @@
+export { PostCardMin} from './PostCardMin'

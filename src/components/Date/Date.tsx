@@ -9,8 +9,8 @@ type DateProps = {
 
 export const Date = (props: DateProps) => {
     return (
-        <div className='divDate'>
-            <p className='pDate'>{props.text}</p>
+        <div>
+            <p className='date__p'>{props.text}</p>
         </div>
     )
 }

@@ -9,6 +9,7 @@ import PicturePostCardMicro from './img/PostCardMicro.svg'
 type PostCardMicroProps = {
     className?: string
     image?: string
+    
 }
 
 export const PostCardMicro = (props: PostCardMicroProps) => {
