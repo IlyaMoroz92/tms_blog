@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Button } from './components/Button';
 import { ReactComponent as Down} from './components/Button/img/Down.svg' 
+import { ReactComponent as Bookmark} from './components/Button/img/Bookmark.svg' 
 import { ReactComponent as Up} from './components/Button/img/Down.svg' 
 
 
@@ -23,7 +24,7 @@ function App() {
         />
         <Button
           text='Button with icon'
-          icon={<Down />}
+          icon={<Bookmark />}
           className='with-icon margin'
         />
         <Button
@@ -53,7 +54,7 @@ function App() {
         />
         <Button
           text='Button with icon'
-          icon={<Down />}
+          icon={<Bookmark />}
           className='with-icon margin'
           disabled
         />
