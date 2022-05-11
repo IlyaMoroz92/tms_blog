@@ -8,6 +8,8 @@ import { PostCard } from './components/PostCard'
 import { LogIn } from './components/LogIn'
 import { LoginFunc } from './components/LoginFunc'
 /* import { InputNew } from './components/InputNew/InputNew' */
+import { PostCardNew } from './components/PostCardNew'
+import { content } from './components/PostCardNew/content';
 
 
 import IconBlack from '../src/components/Button/img/IconBlack.svg'
@@ -16,22 +18,12 @@ import LikeUpBlack from '../src/components/Button/img/LikeUpBlack.svg'
 
 
 
-
-const cards = [
-  {
-      id: 1,
-      title: 'Astronauts prep for new solar arrays on nearly seven-hour spacewalk ...',
-      description: 'Astronauts Kayla Barron and Raja Chari floated out of the International Space Station airlock for a spacewalk Tuesday, installing brackets and struts to support new solar arrays to upgrade the research lab’s power system on the same day that crewmate Mark Vande Hei marked his 341st day in orbit, a U.S. record for a single spaceflight.',
-      imageUrl: 'https://s3-alpha-sig.figma.com/img/52f9/5dda/fe2406480a136180247e955f197ca67e?Expires=1652054400&Signature=Iy~SAIDzclA5fWDcIL16GAbiux8fI0ubDMmfaWlQgZc5dQcOesWbmaAKU8ZZzLxUkx-G9m-TbEMxVtrEpE7mODIzyKiPSH~FVzX0-thG4c4Au2ui9Jtxdeob4OrF9M2tRriSoYIIVa8a7XFI-oaCVPjF1-c08bvYJTgfE5r7nDLjbD4KcgL8EnEG~nWfnoF8fMjKL-sJmoGATaSgLAc~KgT19VNpHTS82TCGoX-V0W0OkTIK8Rz-~CkHf1zBuSt5fzLEGIaGCbMeruUm6MSR7xiht1hrL9DuqxdHa8tYUH-mODts6L182QCRxZKndPB6oi0HnL9IQ2K0DCYEAPQ4Ag__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-  },
-  {}
-]
-
-
 function App() {
+
+
   return (
     <div className="App">
-      <div className="buttonsAndInputs">
+     {/*  <div className="buttonsAndInputs">
         <Button text = 'Primary' onClick ={() => console.log('Primary')} className='primary button' disabled={false} />
         <Button text = 'Secondary' onClick ={() => console.log('Secondary')} className='secondary button' disabled={false}/>
         <Button text = 'Secondary 2' onClick ={() => console.log('Secondary 2')} className='secondary2 button' disabled={false}/>
@@ -44,12 +36,67 @@ function App() {
         <Textarea text = 'Textarea' type='textarea'  className='divTextarea' classNameTextarea='textarea' disabled={false} placeholder='введите коментарий'/>
       </div>
 
-      <PostList/>
+      <PostList/> */}
       {/* <LogIn/> */}
       {/* <InputNew/> */}
+      {/* <PostCardNew/> */}
 
 
-      <PostCard/>
+      <div>
+{/*         <ul>
+          {content.map((el, ind) => (
+            <li key={`${ind}`}>
+              <img src={require(`${el.image}`)} alt="" />
+              <p>{el.date}</p>
+              <p>{el.title}</p>
+              <p>{el.text}</p>
+            </li>
+          ))}
+        </ul> */}
+
+
+        <div>
+          {content.map((el, ind) => {
+            if(ind < 1) {
+              return (
+              <PostCardNew key={ind}
+                title={el.title}
+                text={el.text}
+                image={require(`${el.image}`)}
+                date={el.date}
+                className='sizeL'
+              />
+              )
+            } else if(ind < 6) {
+              return (
+                <PostCardNew key={ind}
+                  title={el.title}
+                  /* text={el.text} */
+                  image={require(`${el.image}`)}
+                  date={el.date}
+                  className='sizeM'
+                />
+                )
+            } else if(ind < 12) {
+              return (
+                <PostCardNew key={ind}
+                  title={el.title}
+                  /* text={el.text} */
+                  image={require(`${el.image}`)}
+                  date={el.date}
+                  className='sizeS'
+                />
+                )
+            }
+              }
+          )}
+          
+        </div>
+      </div>
+
+
+
+
     </div>
   )
 }

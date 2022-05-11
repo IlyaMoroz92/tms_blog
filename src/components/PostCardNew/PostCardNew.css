@@ -1,0 +1,25 @@
+.postcard__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.postcard__picture{
+    padding-left: 10px;
+}
+
+.postcard__div {
+    border-bottom: 2px solid #DADADA;
+    padding: 20px 0;
+    max-width: 740px;
+    position: relative;
+}
+
+.postcard__title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.postcard__title:hover {
+    color: #2231AA;
+    cursor: pointer;
+}
