@@ -7,7 +7,7 @@ type ButtonProps = {
     className?: string
     icon?: ReactElement
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
-    alt?: string
+    type?: string
 }
 
 export const Button =  (props: ButtonProps) => {
