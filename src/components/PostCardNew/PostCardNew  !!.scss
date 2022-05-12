@@ -1,0 +1,140 @@
+/* .postcard__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.postcard__picture{
+    padding-left: 10px;
+}
+
+.postcard__div {
+    border-bottom: 2px solid #DADADA;
+    padding: 20px 0;
+    max-width: 740px;
+    position: relative;
+}
+
+.postcard__title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.postcard__title:hover {
+    color: #2231AA;
+    cursor: pointer;
+}
+
+ */
+
+.postcard {
+    &__content--sizeL {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    &__picture--sizeL {
+        padding-left: 10px;
+    }
+
+    &__div--sizeL {
+        border-bottom: 2px solid #DADADA;
+        padding: 20px 0;
+        max-width: 740px;
+        position: relative;
+    }
+
+    &__title--sizeL {
+        font-size: 32px;
+        font-weight: 700;
+        
+        &:hover {
+            color: #2231AA;
+            cursor: pointer;
+        }
+    }
+
+    &__img--sizeL > img {
+        width: 256px;
+        height: 244px; 
+        object-fit: cover
+    }
+
+
+    &__div--sizeM {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        border-bottom: 2px solid #DADADA;
+        padding: 20px 0;
+        max-width: 352px;
+        position: relative;
+    }
+    &__content--sizeM {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__picture--sizeM {
+        order: -1;
+    }
+    
+    &__title--sizeM {
+        font-size: 16px;
+        font-weight: 700;
+    
+        &:hover {
+            color: #2231AA;
+            cursor: pointer;
+        }
+    }
+
+    &__img--sizeM > img {
+        width: 352px;
+        height: 246px; 
+        object-fit: cover
+    }
+
+
+    &__div--sizeS {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        border-bottom: 2px solid #DADADA;
+        padding: 20px 0;
+        max-width: 352px;
+        position: relative;
+    }
+
+    &__content--sizeS {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    &__picture--sizeS {
+    }
+    
+    &__title--sizeS {
+        font-size: 16px;
+        font-weight: 700;
+    
+        &:hover {
+            color: #2231AA;
+            cursor: pointer;
+        }
+    }
+
+    &__img--sizeS > img {
+        width: 96px;
+        height: 96px; 
+        object-fit: cover
+    }
+
+
+
+
+
+
+
+
+}
+
