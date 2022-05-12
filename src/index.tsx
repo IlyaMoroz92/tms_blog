@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom' 
+import {BrowserRouter, Routes, Route} from 'react-router-dom' 
+import { AddPost } from './pages/AddPost/addPost';
+import { Post } from './pages/Post/post';
+import { Posts } from './pages/Posts/posts';
+import { Search } from './pages/Search/search';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +15,21 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/posts' element={<Posts />} />
+        <Route path='/posts/add' element={<AddPost />} />
+        <Route path='/posts/:id' element={<Post />} />
+        <Route path='/search' element={<Search />} />
+        <Route
+            path='*'
+            element={
+              <main style={{padding: '1rem'}}>
+              <p>404 Not Found</p>
+              </main>
+            }
+        />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
