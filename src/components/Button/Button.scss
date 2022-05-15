@@ -1,0 +1,78 @@
+@import "../../styles/_variables";
+
+.button {
+    border: 1px solid transparent;
+    font-size: 18px;
+    border-radius: 2px;
+    padding: 16px 32px;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 24px;
+
+    &:hover {
+        svg path{
+            fill: $color-white;
+        }
+    }
+
+    &--primary {
+        color: $color-white;
+        background-color: #2231AA;
+    }
+
+    &--primary:hover {
+        background-color: $color-primary2;
+    }
+
+    &--secondary, &--with-icon {
+        color: $color-secondary;
+        background-color: $color-light;
+    }
+
+    &--secondary:hover {
+        background-color: $color-medium;
+    }
+
+    &--secondary2 {
+        color: $color-error;
+        background-color: inherit;
+    }
+
+    &--secondary2:hover {
+        border: 1px solid #E5E5E5
+    }
+
+    &--with-icon:hover , &--with-icon-like:hover {
+        color: $color-white;
+        background-color: $color-primary2;
+    }
+
+    &--with-icon-dislike:hover {
+        background-color: $color-error;
+    }
+
+    svg ~ &__text {
+        margin-left: 12px;
+    }
+
+    svg {
+        vertical-align: middle;
+    }
+
+    &:disabled {
+        background-color: $color-light;
+        color: $color-gray;
+        cursor: inherit;
+        svg path{
+            fill: $color-gray;
+        }
+    }
+
+    &--secondary2:disabled {
+        background-color: white;
+        border: none;
+    }
+}
+
+
+
