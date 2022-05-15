@@ -1,10 +1,11 @@
+
 import React from 'react';
 import './App.css';
 import { Button } from './components/Button';
 import { ReactComponent as Down} from './components/Button/img/Down.svg' 
 import { ReactComponent as Bookmark} from './components/Button/img/Bookmark.svg' 
 import { ReactComponent as Up} from './components/Button/img/Down.svg' 
-
+import { Input } from './Input';
 
 
 function App() {
@@ -69,7 +70,19 @@ function App() {
           disabled
           />
       </div>
-      
+      <Input
+        title='Password'
+        className='password'
+        type='password'
+        placeholder='Введите пароль'
+        errorMessage='Пароль слишком короткий'
+      />
+      <Input
+        title='Email'
+        className='email'
+        type="email"
+        placeholder='Введите mail'
+      />
     </div>
   );
 }
