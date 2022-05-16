@@ -1,5 +1,5 @@
 
-import React from 'react';
+import {useState} from 'react';
 import './App.css';
 import { Button } from './components/Button';
 import { ReactComponent as Down} from './components/Button/img/Down.svg' 
@@ -9,12 +9,21 @@ import { Input } from './components/Input';
 
 
 function App() {
+  const [theme, setTheme] = useState('dark')
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark'
+    console.log('works')
+    setTheme(newTheme)
+  }
+
   return (
-    <div className="App">
+    <div className={`App theme--${theme}`}>
       <div className="buttons">
         <Button 
           text='Primary'
-          className='primary margin'/>
+          className='primary margin'
+          onClick={toggleTheme}/>
         <Button
           text='Secondary'
           className='secondary margin'
@@ -83,6 +92,7 @@ function App() {
         type="email"
         placeholder='Введите mail'
       />
+      div.
     </div>
   );
 }
