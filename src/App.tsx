@@ -5,7 +5,9 @@ import { Button } from './components/Button';
 import { ReactComponent as Down} from './components/Button/img/Down.svg' 
 import { ReactComponent as Bookmark} from './components/Button/img/Bookmark.svg' 
 import { ReactComponent as Up} from './components/Button/img/Down.svg' 
+import { ReactComponent as More} from './components/Button/img/More.svg' 
 import { Input } from './components/Input';
+import { Likebar } from './components/Likebar';
 
 
 function App() {
@@ -83,6 +85,8 @@ function App() {
         type="email"
         placeholder='Введите mail'
       />
+
+      <Likebar/>
     </div>
   );
 }
