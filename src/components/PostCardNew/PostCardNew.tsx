@@ -1,4 +1,4 @@
-import './PostCardNew.css'
+import './PostCardNew.scss'
 import { Likes } from '../Likes/Likes'
 import { Article } from '../Article/Article'
 import { Picture } from '../Picture/Picture'
@@ -19,14 +19,14 @@ type PostCardNewProps = {
 export const PostCardNew = (props: PostCardNewProps) => {
     return (
         <div className={`postcard__div postcard__div--${props.className}`}>
-            <div className="postcard__content">
-                <div className="postcard__textcontent">
+            <div className={`postcard__content postcard__content--${props.className}`}>
+                <div className={`postcard__textcontent postcard__textcontent--${props.className}`}>
                     <Date  text={props.date}/>
-                    <Title  className='postcard__title' text={props.title}/>
+                    <Title  className={`postcard__title postcard__title--${props.className}`} text={props.title}/>
                     <Article text = {props.text}/>
                 </div>
-                <div className="postcard__picture">
-                    <Picture image = {props.image} className='postcard__img'/>
+                <div className={`postcard__picture postcard__picture--${props.className}`}>
+                    <Picture image = {props.image} className={`postcard__img postcard__img--${props.className}`}/>
                 </div>
             </div>
             <Likes/>
