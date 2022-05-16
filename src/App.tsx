@@ -29,7 +29,7 @@ function App() {
               <PostCardNew key={ind}
                 title={el.title}
                 text={el.text}
-                image={require(`${el.image}`)}
+                image={el.image}
                 date={el.date}
                 className='sizeL'
               />
@@ -38,7 +38,7 @@ function App() {
               return (
                 <PostCardNew key={ind}
                   title={el.title}
-                  image={require(`${el.image}`)}
+                  image={el.image}
                   date={el.date}
                   className='sizeM'
                 />
@@ -47,7 +47,7 @@ function App() {
               return (
                 <PostCardNew key={ind}
                   title={el.title}
-                  image={require(`${el.image}`)}
+                  image={el.image}
                   date={el.date}
                   className='sizeS'
                 />

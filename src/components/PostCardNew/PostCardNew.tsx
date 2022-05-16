@@ -14,6 +14,8 @@ type PostCardNewProps = {
     text?: string
     date?: string
     id?: number | undefined
+    author?: string
+    lesson_num?: number
 }
 
 export const PostCardNew = (props: PostCardNewProps) => {
