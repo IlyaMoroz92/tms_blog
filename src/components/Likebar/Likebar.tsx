@@ -15,28 +15,26 @@ export const Likebar = (props: LikebarProps) => {
     const [text, setLike]= useState(0)
     return (
         <div className= 'likebar'>
-            <div className="left">
+            <div className="likebar__left">
                 <Button
                     icon={<Up />}
-                    className={`likebar__button likebar__button_like--${props.className}`}
+                    className={`likebar likebar__up--${props.className}`}
                     onClick={() => setLike(text+1)}
                 />
-                <span className={`likebar__counter likebar__counter--${props.className}`}>{text}</span>
+                <p className={`likebar__counter likebar__counter--${props.className}`}>{text}</p>
                 <Button
                     icon={<Down />}
-                    className={`likebar__button likebar__button_dislike--${props.className}`}
+                    className={`likebar likebar__down--${props.className}`}
                 />
-                {/* <button className='likebar__button buttonLikeUp'><img src={LikeUpBlack} alt="" onClick={() => setLike(text+1)}/> <span className="spanText">{text}</span></button>
-                <button className='likebar__button buttonLikeDown'><img src={LikeDownBlack} alt="" /></button> */}
             </div>
-            <div className="right">
+            <div className="likebar__right">
                 <Button
                     icon={<Bookmark />}
-                    className={`likebar__button likebar__button_bookmark--${props.className}`}
+                    className={`likebar likebar__bookmark--${props.className}`}
                 />
                 <Button
                     icon={<More />}
-                    className={`likebar__button likebar__button_more--${props.className}`}
+                    className={`likebar likebar__more--${props.className}`}
                 />
             </div>
         </div>

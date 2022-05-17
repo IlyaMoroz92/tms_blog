@@ -14,12 +14,12 @@ export const Button =  (props: ButtonProps) => {
     return (
         <button
         type='button'
-        className={`button button--${props.className}`}
+        className={`button--${props.className}`}
         disabled={props.disabled}
         onClick={props.onClick}
         >
-            {props.icon}
-            {props.text && <span className="button__text">{props.text}</span>}
+        {props.icon}
+        {props.text && <span className="button__text">{props.text}</span>}
         </button>
     )
 }

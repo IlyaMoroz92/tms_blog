@@ -16,59 +16,59 @@ function App() {
       <div className="buttons">
         <Button 
           text='Primary'
-          className='primary margin'/>
+          className='primary button'/>
         <Button
           text='Secondary'
-          className='secondary margin'
+          className='secondary button'
         />
         <Button
           text='Secondary 2'
-          className='secondary2 margin'
+          className='secondary2 button'
         />
         <Button
           text='Button with icon'
           icon={<Bookmark />}
-          className='with-icon margin'
+          className='with-icon button'
         />
         <Button
           icon={<Down/>}
-          className='with-icon-dislike margin'
+          className='with-icon-dislike button'
           />
         <Button
           icon={<Up />}
-          className='with-icon-like margin'
+          className='with-icon-like button'
           />
       </div>
       <div className="buttons_disabled">
       <Button 
           text='Primary'
-          className='primary margin'
+          className='primary button'
           disabled
           />
         <Button
           text='Secondary'
-          className='secondary margin'
+          className='secondary button'
           disabled
         />
         <Button
           text='Secondary 2'
-          className='secondary2 margin'
+          className='secondary2 button'
           disabled
         />
         <Button
           text='Button with icon'
           icon={<Bookmark />}
-          className='with-icon margin'
+          className='with-icon button'
           disabled
         />
         <Button
           icon={<Down/>}
-          className='with-icon-dislike margin'
+          className='with-icon-dislike button'
           disabled
           />
         <Button
           icon={<Up />}
-          className='with-icon-like margin'
+          className='with-icon-like button'
           disabled
           />
       </div>
@@ -86,7 +86,8 @@ function App() {
         placeholder='Введите mail'
       />
 
-      <Likebar/>
+      <Likebar
+      className='likes'/>
     </div>
   );
 }
