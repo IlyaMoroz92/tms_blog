@@ -8,6 +8,7 @@ import { ReactComponent as Up} from './components/Button/img/Down.svg'
 import { ReactComponent as More} from './components/Button/img/More.svg' 
 import { Input } from './components/Input';
 import { Likebar } from './components/Likebar';
+import { Footer } from './components/Footer';
 
 
 function App() {
@@ -88,6 +89,8 @@ function App() {
 
       <Likebar
       className='likes'/>
+      <Footer
+      className='w'/>
     </div>
   );
 }
