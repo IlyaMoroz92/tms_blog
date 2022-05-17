@@ -9,6 +9,7 @@ import { ReactComponent as More} from './components/Button/img/More.svg'
 import { Input } from './components/Input';
 import { Likebar } from './components/Likebar';
 import { Footer } from './components/Footer';
+import { Date } from './components/Date';
 
 
 function App() {
@@ -86,11 +87,13 @@ function App() {
         type="email"
         placeholder='Введите mail'
       />
-
       <Likebar
       className='likes'/>
+      <Date
+      className='today'
+      date='22-05-1992'/>
       <Footer
-      className='w'/>
+      className='123'/>
     </div>
   );
 }
