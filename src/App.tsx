@@ -10,6 +10,7 @@ import { useTheme } from './features/theme/useTheme';
 import { useAppDispatch, useAppSelector } from './redux/hooks';
 import { fetchPosts, likePost, dislikePost} from './features/posts/postsSlice';
 import { postsData} from './redux/postsData';
+import { usePosts} from './features/posts/usePosts';
 
 
 

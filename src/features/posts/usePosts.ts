@@ -11,8 +11,8 @@ export const usePosts = () => {
         setTimeout(() => {
             dispatch(fetchPosts(postsData))
         }, 1000)
-        , []
-    })
+        }, []
+    )
 
     const onLikePost = (id: number) => {
         dispatch(likePost(id))
