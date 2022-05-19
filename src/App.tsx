@@ -43,10 +43,16 @@ function App() {
         return(
           <div key={post.id}>
             <p>{post.title}</p>
+            <p>{String(post.like)}</p>
             <Button 
-              text='Primary'
+              text='Like'
               className='primary margin'
               onClick={() =>onLikePost(post.id)}
+            />
+            <Button 
+              text='Dislike'
+              className='primary margin'
+              onClick={() =>onDislikePost(post.id)}
             />
           </div>)
         }

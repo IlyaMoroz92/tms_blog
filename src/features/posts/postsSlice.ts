@@ -26,8 +26,10 @@ export const postsSlice = createSlice ({
     reducers: {
         fetchPosts: (state, action: PayloadAction<Array<Post>>) => {
             state.content = action.payload
+            
         },
         likePost: (state, action: PayloadAction<number>) =>{
+            console.log(state.content)
             if(state.content) {
                 state.content = state.content.map(post =>
                     post.id === action.payload ? {...post, like: true} : post
