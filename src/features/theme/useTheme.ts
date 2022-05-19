@@ -9,6 +9,7 @@ export const useTheme = () => {
         const newTheme = theme === 'dark' ? 'light' : 'dark'
         dispatch(setTheme(newTheme))
       }
+
       return {
           theme,
           toggleTheme,

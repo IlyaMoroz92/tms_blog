@@ -8,6 +8,7 @@ type Post = {
     lesson_num: number
     title: string
     author: number
+    like?: boolean
 }
 
 
@@ -25,9 +26,23 @@ export const postsSlice = createSlice ({
     reducers: {
         fetchPosts: (state, action: PayloadAction<Array<Post>>) => {
             state.content = action.payload
+        },
+        likePost: (state, action: PayloadAction<number>) =>{
+            if(state.content) {
+                state.content = state.content.map(post =>
+                    post.id === action.payload ? {...post, like: true} : post
+                )
+            }
+        },
+        dislikePost: (state, action: PayloadAction<number>) =>{
+            if(state.content) {
+                state.content = state.content.map(post =>
+                    post.id === action.payload ? {...post, like: false} : post
+                )
+            }
         }
     }
 })
 
-export const {fetchPosts} = postsSlice.actions
+export const {fetchPosts, likePost, dislikePost} = postsSlice.actions
 export default postsSlice.reducer

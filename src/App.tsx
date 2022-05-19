@@ -8,7 +8,7 @@ import { ReactComponent as Up} from './components/Button/img/Down.svg'
 import { Input } from './components/Input';
 import { useTheme } from './features/theme/useTheme';
 import { useAppDispatch, useAppSelector } from './redux/hooks';
-import { fetchPosts} from './features/posts/postsSlice';
+import { fetchPosts, likePost, dislikePost} from './features/posts/postsSlice';
 import { postsData} from './redux/postsData';
 
 
@@ -22,8 +22,9 @@ function App() {
   } */
 
   const {theme, toggleTheme } = useTheme()
+  const {posts, onLikePost,  onDislikePost} = usePosts()
 
-  const posts = useAppSelector(state => state.posts.content)
+/*   const posts = useAppSelector(state => state.posts.content)
   const dispatch = useAppDispatch()
 
 
@@ -33,20 +34,28 @@ function App() {
     }, 100);
   })
 
-  console.log(posts)
+  console.log(posts) */
 
   return (
     <div className={`App theme--${theme}`}>
+      {posts?.map(post=> {
+        return(
+          <div key={post.id}>
+            <p>{post.title}</p>
+            <Button 
+              text='Primary'
+              className='primary margin'
+              onClick={() =>onLikePost(post.id)}
+            />
+          </div>)
+        }
+      )}
       <div className="buttons">
-        <Button 
-          text='Primary'
-          className='primary margin'
-          onClick={toggleTheme}/>
         <Button
           text='Secondary'
           className='secondary margin'
+          onClick={toggleTheme}
         />
-        
         <Button
           text='Secondary 2'
           className='secondary2 margin'

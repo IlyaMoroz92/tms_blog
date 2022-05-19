@@ -1,16 +1,30 @@
-import { fetchPosts } from './postsSlice';
+import { useEffect } from 'react';
+import { fetchPosts, likePost, dislikePost } from './postsSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import { postsData } from '../../redux/postsData';
 
-export const useTheme = () => {
-/*     const theme = useAppSelector(state => state.theme.value)
+export const usePosts = () => {
+    const posts = useAppSelector(state => state.posts.content)
     const dispatch = useAppDispatch()
     
-    const toggleTheme = () => {
-        const newTheme = theme === 'dark' ? 'light' : 'dark'
-        dispatch(setTheme(newTheme))
-      }
+    useEffect(() =>{
+        setTimeout(() => {
+            dispatch(fetchPosts(postsData))
+        }, 1000)
+        , []
+    })
+
+    const onLikePost = (id: number) => {
+        dispatch(likePost(id))
+    }
+
+    const onDislikePost = (id: number) => {
+        dispatch(dislikePost(id))
+    }
+
       return {
-          theme,
-          toggleTheme,
-      } */
+          posts,
+          onLikePost,
+          onDislikePost,
+      }
 }
