@@ -6,26 +6,19 @@ import { ReactComponent as Down} from './components/Button/img/Down.svg'
 import { ReactComponent as Bookmark} from './components/Button/img/Bookmark.svg' 
 import { ReactComponent as Up} from './components/Button/img/Down.svg' 
 import { Input } from './components/Input';
-import { setTheme } from './redux/reducers/theme';
-import { useAppDispatch, useAppSelector } from './redux/hooks';
+import { useTheme } from './features/theme/useTheme';
+
 
 
 function App() {
  /*  const [theme, setTheme] = useState('dark') */
-
-  const theme = useAppSelector(state => state.theme.value)
-  const dispatch = useAppDispatch()
-
   /* const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark'
     console.log('works')
     setTheme(newTheme)
   } */
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
-    dispatch(setTheme(newTheme))
-  }
+  const {theme, toggleTheme } = useTheme()
 
   return (
     <div className={`App theme--${theme}`}>
