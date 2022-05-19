@@ -1,8 +1,8 @@
-import { setTheme } from './themeSlice';
+import { fetchPosts } from './postsSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 
 export const useTheme = () => {
-    const theme = useAppSelector(state => state.theme.value)
+/*     const theme = useAppSelector(state => state.theme.value)
     const dispatch = useAppDispatch()
     
     const toggleTheme = () => {
@@ -12,5 +12,5 @@ export const useTheme = () => {
       return {
           theme,
           toggleTheme,
-      }
+      } */
 }
