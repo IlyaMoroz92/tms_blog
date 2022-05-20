@@ -2,3 +2,9 @@ nav {
     display: flex;
     flex-direction: column;
 }
+
+.active {
+    text-decoration: none;
+    color: green;
+    font-weight: 700;
+}
