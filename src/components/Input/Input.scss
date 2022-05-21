@@ -1,16 +1,18 @@
 
 .input {
     display: flex;
-}
-
-.input__error {
-    color: red;
-    margin: 0;
-}
-
-.input--email, .input--password{
-    width: 544px;
+    width: 99%;
+    margin: 0 auto;
     height: 56px;
     font-size: 16px;
     border-radius: 2px;
+
+    &__div {
+        font-weight: 600;
+    }
+
+    &__error {
+        color: red;
+        margin: 0;
+    }
 }
