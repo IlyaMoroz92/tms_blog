@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <nav>
+        <button><NavLink to='posts'>Posts</NavLink></button>
         <NavLink to='posts'>Posts</NavLink>
         <NavLink to='posts/1'>Post 1</NavLink>
         <NavLink to='posts/add'>Post Add</NavLink>
