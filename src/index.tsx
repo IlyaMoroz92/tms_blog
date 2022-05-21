@@ -17,8 +17,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<App />} />
-          <Route index element={<App />} />
+          <Route path='/' element={<App />}>
+            <Route path='/favorites' element={<Blog />} />
+            <Route path='/popular' element={<Blog />} />
+          </Route>
           <Route path='signin' element={<SignIn />} />
           <Route path='signup' element={<SignUp />} />
           <Route

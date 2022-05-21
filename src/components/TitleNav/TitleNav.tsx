@@ -9,12 +9,8 @@ type TitleNavProps = {
 
 export const TitleNav = (props: TitleNavProps) => {
     return (
-        <div className='titlenav__main'>
-            <NavLink to={props.to}>{props.text}</NavLink>
+        <div className={`titlenav titlenav--${props.className}`}>
+            <NavLink to={props.to} className={`titlenav__link--${props.className}`}>{props.text} </NavLink>
         </div>
     )
 }
-
-
-
-
