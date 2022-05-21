@@ -6,12 +6,13 @@ import { ReactComponent as Down} from './components/Button/img/Down.svg'
 import { ReactComponent as Bookmark} from './components/Button/img/Bookmark.svg' 
 import { ReactComponent as Up} from './components/Button/img/Down.svg' 
 import { Input } from './components/Input';
+import { Header } from './components/Header';
 
 
 function App() {
   return (
     <div className="App">
-      <div className="buttons">
+      {/* <div className="buttons">
         <Button 
           text='Primary'
           className='primary margin'/>
@@ -82,7 +83,9 @@ function App() {
         className='email'
         type="email"
         placeholder='Введите mail'
-      />
+      /> */}
+
+    <Header/>
     </div>
   );
 }

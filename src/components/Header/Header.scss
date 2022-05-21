@@ -1,16 +1,45 @@
+@import "../../styles/_variables";
 
-.input {
+.header {
+    &__main {
+    background-color: $color-primary;
     display: flex;
+    justify-content: space-between;
+    line-height: 84px;
+    }
+
+    &__buttons {
+        border: none;
+        background-color: inherit;
+        height: 100%;
+    }
+
+    &__right {
+        display: flex;
+    }
+
+    &__burger {
+        border-right: 1px solid $color-primary2;
+        cursor: pointer;
+    }
+
+    &__search {
+        border-right: 1px solid $color-primary2;
+        border-left: 1px solid $color-primary2;
+        cursor: pointer;
+    }
+
+    &__user {
+        color: white;
+        font-weight: 600;
+        padding-right: 10px;
+
+        &--abbr {
+            padding: 14px;
+            margin: 0 15px;
+            height: 24px;
+            background-color: $color-primary2;
+        }
+    }
 }
 
-.input__error {
-    color: red;
-    margin: 0;
-}
-
-.input--email, .input--password{
-    width: 544px;
-    height: 56px;
-    font-size: 16px;
-    border-radius: 2px;
-}
