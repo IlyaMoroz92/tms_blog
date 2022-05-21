@@ -16,7 +16,7 @@ import  Layout  from './components/Layout/Layout';
 function App() {
   return (
     <div className="App">
-        <Header/>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque sed non eius quis consequatur temporibus mollitia unde beatae cupiditate quibusdam iusto ut, eveniet nam repellat blanditiis assumenda voluptatibus consectetur fugit.
     </div>
   );
 }

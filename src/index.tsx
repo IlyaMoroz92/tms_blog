@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom' 
 import { Blog } from './pages/Blog/blog';
+import Layout from './components/Layout/Layout';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +13,12 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<App />} />
+          <Route path='blog' element={<Blog />} />
+        </Route>
+        </Routes>
     </BrowserRouter>
 
     
