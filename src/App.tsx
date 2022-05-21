@@ -17,7 +17,11 @@ function App() {
   return (
     <div className="App">
       <Blog />
+      {/* <Input
+        type='password'
+      /> */}
     </div>
+    
   );
 }
 
