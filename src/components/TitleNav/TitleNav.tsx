@@ -1,15 +1,16 @@
 import './TitleNav.scss'
-
+import {NavLink} from 'react-router-dom'
 
 type TitleNavProps = {
     className?: string
     text?: string
+    to?: any
 }
 
 export const TitleNav = (props: TitleNavProps) => {
     return (
         <div className='titlenav__main'>
-            <p className={`titlenav titlenav--${props.className}`}>{props.text}Back to home</p>
+            <NavLink to={props.to}>{props.text}</NavLink>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom' 
@@ -16,7 +16,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Blog />} />
+          <Route index element={<App />} />
+          <Route index element={<App />} />
           <Route path='signin' element={<SignIn />} />
           <Route
             path='*'
