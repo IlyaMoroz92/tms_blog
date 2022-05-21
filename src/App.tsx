@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { Button } from './components/Button';
 import { ReactComponent as Down} from './components/Button/img/Down.svg' 
 import { ReactComponent as Bookmark} from './components/Button/img/Bookmark.svg' 
@@ -11,12 +11,12 @@ import {NavLink} from 'react-router-dom'
 import { BrowserRouter } from "react-router-dom";
 import { Blog } from "./pages/Blog/blog";
 import  Layout  from './components/Layout/Layout';
-
+import { Title } from './components/Title';
 
 function App() {
   return (
     <div className="App">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque sed non eius quis consequatur temporibus mollitia unde beatae cupiditate quibusdam iusto ut, eveniet nam repellat blanditiis assumenda voluptatibus consectetur fugit.
+      <Title text='Posts' className='title'/>
     </div>
   );
 }

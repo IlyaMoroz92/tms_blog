@@ -12,7 +12,6 @@ const Layout = () => {
         <div className="container">
             <Outlet/>
         </div>
-        
         <p>FOOTER</p>
       </>
       

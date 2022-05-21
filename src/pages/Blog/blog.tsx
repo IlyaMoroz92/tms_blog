@@ -1,5 +1,6 @@
 import React from "react";
+import { Title } from "../../components/Title";
 
 export const Blog = () => {
-    return <h1>Blog</h1>
+    return <Title text='Blog' className='title'/>
 }

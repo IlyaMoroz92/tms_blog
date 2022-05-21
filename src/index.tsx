@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom' 
 import { Blog } from './pages/Blog/blog';
+import { SignIn } from './pages/SignIn/signin';
 import Layout from './components/Layout/Layout';
 
 const root = ReactDOM.createRoot(
@@ -15,10 +16,18 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<App />} />
-          <Route path='blog' element={<Blog />} />
+          <Route index element={<Blog />} />
+          <Route path='signin' element={<SignIn />} />
+          <Route
+            path='*'
+            element={
+              <main style={{padding: '1rem'}}>
+              <p>404 Not Found</p>
+              </main>
+            }
+        />
         </Route>
-        </Routes>
+      </Routes>
     </BrowserRouter>
 
     
