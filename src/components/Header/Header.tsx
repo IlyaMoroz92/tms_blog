@@ -14,13 +14,11 @@ type HeaderProps = {
     image?: string
 }
 
-
-
 export const Header = (props: HeaderProps) => {
 
     const [visible, setVisible] = useState(false)
     const toggleVisible = () => {
-        
+
         setVisible((visible): boolean => !visible)
     }
 
@@ -59,41 +57,3 @@ export const Header = (props: HeaderProps) => {
     )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* 
-export const Header = (props: HeaderProps) => {
-    return (
-        <div className='header__main'>
-            <div className="header__burger">
-                <Button
-                    text=''
-                    icon={<BurgerOpen />}
-                    className='burger header__buttons'
-                />
-            </div>
-            <div className="header__right">
-                <div className="header__search">
-                    <Button
-                        text=''
-                        icon={<Search />}
-                        className='search header__buttons'
-                    />
-            </div>
-                <div className="header__user">
-                    <span className='header__user--abbr'>AM</span>
-                    <span className='header__user--name'>Artem Malkin</span>
-                </div>
-            </div>
-        </div>
-    )
-} */
