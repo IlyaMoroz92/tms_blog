@@ -115,18 +115,32 @@ function App() {
           />
       </div>
       <Input
+        title='Name'
+        className=''
+        type='text'
+        placeholder='Введите Имя'
+      />
+      <Input
+        title='Email'
+        className=''
+        type="email"
+        placeholder='Введите mail'
+      />
+      <Input
         title='Password'
-        className='password'
+        className=''
         type='password'
         placeholder='Введите пароль'
         errorMessage='Пароль слишком короткий'
       />
       <Input
-        title='Email'
-        className='email'
-        type="email"
-        placeholder='Введите mail'
+        title='Confirm password'
+        className=''
+        type='password'
+        placeholder='Подтвердите пароль'
+        errorMessage='Пароль слишком короткий'
       />
+
     </div>
   );
 }
