@@ -3,7 +3,7 @@ import {put, call, takeEvery} from 'redux-saga/effects'
 import {
     signUpFailure,
     signUpSucces,
-} from '../auth/authSlice'
+} from '../features/auth/authSlice'
 
 const delay = (ms: number) => new Promise (res => {
     setTimeout(res, ms)
