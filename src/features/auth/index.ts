@@ -1,0 +1,1 @@
+export { signUp,default as AuthReducer} from './authSlice'
