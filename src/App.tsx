@@ -11,28 +11,11 @@ import { useAppDispatch, useAppSelector } from './redux/hooks';
 import { fetchPosts, likePost, dislikePost} from './features/posts/postsSlice';
 import { postsData} from './redux/postsData';
 import { usePosts} from './features/posts/usePosts';
+import { signUp} from './features/auth';
 
 
 
 function App() {
- /*  const [theme, setTheme] = useState('dark') */
-  /* const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
-    console.log('works')
-    setTheme(newTheme)
-  } */
-
-/*   const posts = useAppSelector(state => state.posts.content)
-  const dispatch = useAppDispatch()
-
-
-  useEffect(() => {
-    setTimeout(() => {
-      dispatch(fetchPosts(postsData))
-    }, 100);
-  })
-
-  console.log(posts) */
 
   const {theme, toggleTheme } = useTheme()
   const {posts, onLikePost,  onDislikePost} = usePosts()
@@ -57,6 +40,18 @@ function App() {
 
   const onConfirmPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     SetConfirmPassword(event.target.value)
+  }
+
+  const dispatch = useAppDispatch()
+
+  const submitForm = (event: React.MouseEvent<HTMLButtonElement>):void => {
+    event.preventDefault()
+    const formData = {
+      name,
+      email,
+      password,
+    }
+    dispatch(signUp())
   }
 
   return (
@@ -169,6 +164,7 @@ function App() {
       <Button
           text='Sign Up'
           className='primary margin'
+          onClick={submitForm}
       />
     </div>
   );

@@ -1,1 +1,1 @@
-export { signUp,default as AuthReducer} from './authSlice'
+export { signUp, default as authReducer} from './authSlice'
