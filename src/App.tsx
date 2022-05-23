@@ -1,5 +1,5 @@
 
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import { Button } from './components/Button';
 import { ReactComponent as Down} from './components/Button/img/Down.svg' 
@@ -22,9 +22,6 @@ function App() {
     setTheme(newTheme)
   } */
 
-  const {theme, toggleTheme } = useTheme()
-  const {posts, onLikePost,  onDislikePost} = usePosts()
-
 /*   const posts = useAppSelector(state => state.posts.content)
   const dispatch = useAppDispatch()
 
@@ -36,6 +33,31 @@ function App() {
   })
 
   console.log(posts) */
+
+  const {theme, toggleTheme } = useTheme()
+  const {posts, onLikePost,  onDislikePost} = usePosts()
+
+  const [name, SetName] = useState('')
+  const [email, SetEmail] = useState('')
+  const [password, SetPassword] = useState('')
+
+  const [confirmpassword, SetConfirmPassword] = useState('')
+
+  const onNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    SetName(event.target.value)
+  }
+
+  const onEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    SetEmail(event.target.value)
+  }
+
+  const onPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    SetPassword(event.target.value)
+  }
+
+  const onConfirmPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    SetConfirmPassword(event.target.value)
+  }
 
   return (
     <div className={`App theme--${theme}`}>
@@ -119,12 +141,14 @@ function App() {
         className=''
         type='text'
         placeholder='Введите Имя'
+        onChange={onNameChange}
       />
       <Input
         title='Email'
         className=''
         type="email"
         placeholder='Введите mail'
+        onChange={onEmailChange}
       />
       <Input
         title='Password'
@@ -132,6 +156,7 @@ function App() {
         type='password'
         placeholder='Введите пароль'
         errorMessage='Пароль слишком короткий'
+        onChange={onPasswordChange}
       />
       <Input
         title='Confirm password'
@@ -139,8 +164,12 @@ function App() {
         type='password'
         placeholder='Подтвердите пароль'
         errorMessage='Пароль слишком короткий'
+        onChange={onConfirmPasswordChange}
       />
-
+      <Button
+          text='Sign Up'
+          className='primary margin'
+      />
     </div>
   );
 }
