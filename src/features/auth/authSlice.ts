@@ -8,6 +8,8 @@ type SignUpPayload = {
 
 type AuthState = {
     user: User | null
+    isLoading: string
+    error: string | null
 }
 
 type User = {
@@ -15,34 +17,32 @@ type User = {
 }
 
 const initialState: AuthState = {
-    user: null
+    user: null,
+    isLoading: 'idle',
+    error: null,
 }
 
 export const authSlice = createSlice ({
     name: 'auth',
     initialState,
     reducers: {
-        signUp: (state, action: PayloadAction<SignUpPayload>) => {
-            
-            
-        },
-/*         likePost: (state, action: PayloadAction<number>) =>{
-            console.log(state.content)
-            if(state.content) {
-                state.content = state.content.map(post =>
-                    post.id === action.payload ? {...post, like: true} : post
-                )
+        signUp: state => {
+            if (state.isLoading === 'idle') {
+                state.isLoading = 'pending'
             }
         },
-        dislikePost: (state, action: PayloadAction<number>) =>{
-            if(state.content) {
-                state.content = state.content.map(post =>
-                    post.id === action.payload ? {...post, like: false} : post
-                )
+        signUpSucces: (state, action: PayloadAction<SignUpPayload>) => {
+            if (state.isLoading === 'pending') {
+                state.isLoading = 'idle'
+                state.user = action.payload
             }
-        } */
+        },
+        signUpFailure: (state, action: PayloadAction<string>) => {
+            state.isLoading = 'idle'
+            state.error = action.payload
+        },
     }
 })
 
-export const {signUp} = authSlice.actions
+export const {signUp, signUpSucces, signUpFailure} = authSlice.actions
 export default authSlice.reducer
