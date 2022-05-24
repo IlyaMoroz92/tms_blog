@@ -14,7 +14,7 @@ export const Button =  (props: ButtonProps) => {
     return (
         <button
         type='button'
-        className={`button--${props.className}`}
+        className={`button button--${props.className}`}
         disabled={props.disabled}
         onClick={props.onClick}
         >

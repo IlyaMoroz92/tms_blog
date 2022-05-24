@@ -18,59 +18,59 @@ function App() {
       <div className="buttons">
         <Button 
           text='Primary'
-          className='primary button'/>
+          className='primary'/>
         <Button
           text='Secondary'
-          className='secondary button'
+          className='secondary'
         />
         <Button
           text='Secondary 2'
-          className='secondary2 button'
+          className='secondary2'
         />
         <Button
           text='Button with icon'
           icon={<Bookmark />}
-          className='with-icon button'
+          className='with-icon'
         />
         <Button
           icon={<Down/>}
-          className='with-icon-dislike button'
+          className='with-icon-dislike'
           />
         <Button
           icon={<Up />}
-          className='with-icon-like button'
+          className='with-icon-like'
           />
       </div>
       <div className="buttons_disabled">
       <Button 
           text='Primary'
-          className='primary button'
+          className='primary'
           disabled
           />
         <Button
           text='Secondary'
-          className='secondary button'
+          className='secondary'
           disabled
         />
         <Button
           text='Secondary 2'
-          className='secondary2 button'
+          className='secondary2'
           disabled
         />
         <Button
           text='Button with icon'
           icon={<Bookmark />}
-          className='with-icon button'
+          className='with-icon'
           disabled
         />
         <Button
           icon={<Down/>}
-          className='with-icon-dislike button'
+          className='with-icon-dislike'
           disabled
           />
         <Button
           icon={<Up />}
-          className='with-icon-like button'
+          className='with-icon-like'
           disabled
           />
       </div>

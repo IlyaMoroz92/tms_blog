@@ -7,7 +7,7 @@ type FooterProps = {
 
 export const Footer = (props: FooterProps) => {
     return (
-        <div className={`footer__wrapper footer__wrapper--${props.className} `}>
+        <div className={`footer footer--${props.className} `}>
             <p className={`footer__year--${props.className}`}>©2022 Blogfolio</p>
             <p className={`footer__rights--${props.className}`}>All rights reserved</p>
         </div>
