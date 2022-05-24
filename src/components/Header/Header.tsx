@@ -16,10 +16,10 @@ type HeaderProps = {
 
 export const Header = (props: HeaderProps) => {
 
-    const [visible, setVisible] = useState(false)
+    const [isSearchPanelVisible, setIsSearchPanelVisible] = useState(false)
     const toggleVisible = () => {
 
-        setVisible((visible): boolean => !visible)
+        setIsSearchPanelVisible((isSearchPanelVisible): boolean => !isSearchPanelVisible)
     }
 
     return (
@@ -31,7 +31,7 @@ export const Header = (props: HeaderProps) => {
                     className='burger header__buttons'
                 /> 
             </div>
-            {visible && 
+            {isSearchPanelVisible && 
                         <Input
                             className='header'
                             type='search'

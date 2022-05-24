@@ -8,9 +8,7 @@ type TitleProps = {
 
 export const Title = (props: TitleProps) => {
     return (
-        <div className='title__main'>
-            <h2 className={props.className}>{props.text}</h2>
-        </div>
+        <h2 className={props.className}>{props.text}</h2>
     )
 }
 
