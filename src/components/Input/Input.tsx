@@ -31,7 +31,7 @@ export const Input = (props: InputProps) => {
                 placeholder={props.placeholder}
                 disabled={props.disabled}
             />
-            <p className={`input__error input__error--${props.className}`}>{error}</p>
+            {props.type === 'password' && <p className={`input__error input__error--${props.className}`}>{error}</p>}
         </div>
     )
 }
