@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
+    &:hover {
+        color: black;
+    }
 
     &__button {
         background-color: inherit;
@@ -13,6 +17,7 @@
 }
 
 .button--likebar {
+    padding: 0;
     border: none;
     background-color: inherit;
     cursor: pointer;

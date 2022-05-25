@@ -9,12 +9,6 @@
     font-weight: 600;
     line-height: 24px;
 
-    &:hover {
-        svg path{
-            fill: $color-white;
-        }
-    }
-
     &--primary {
         color: $color-white;
         background-color: #2231AA;
@@ -27,6 +21,7 @@
     &--secondary, &--with-icon {
         color: $color-secondary;
         background-color: $color-light;
+        
     }
 
     &--secondary:hover {
@@ -45,10 +40,16 @@
     &--with-icon:hover , &--with-icon-like:hover {
         color: $color-white;
         background-color: $color-primary2;
+        svg path{
+            fill: $color-white;
+        }
     }
 
     &--with-icon-dislike:hover {
         background-color: $color-error;
+        svg path{
+            fill: $color-white;
+        }
     }
 
     svg ~ &__text {

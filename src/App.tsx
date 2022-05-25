@@ -12,7 +12,6 @@ import { BrowserRouter } from "react-router-dom";
 import { Blog } from "./pages/Blog/blog";
 import  Layout  from './components/Layout/Layout';
 import { Title } from './components/Title';
-=======
 import { Likebar } from './components/Likebar';
 import { Footer } from './components/Footer';
 import { Date } from './components/Date';
