@@ -1,6 +1,17 @@
 
 .input {
     display: flex;
+    &__div {
+        font-weight: 600;
+    }
+}
+
+.input__error {
+    color: red;
+    margin: 0;
+}
+
+.input--email, .input--password{
     width: 99%;
     margin: 0 auto;
     height: 56px;

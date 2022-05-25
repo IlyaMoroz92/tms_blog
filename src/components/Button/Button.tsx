@@ -18,8 +18,8 @@ export const Button =  (props: ButtonProps) => {
         disabled={props.disabled}
         onClick={props.onClick}
         >
-            {props.icon}
-            {props.text && <span className="button__text">{props.text}</span>}
+        {props.icon}
+        {props.text && <span className="button__text">{props.text}</span>}
         </button>
     )
 }
