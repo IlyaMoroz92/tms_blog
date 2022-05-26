@@ -1,6 +1,6 @@
 import {createSlice, type PayloadAction} from '@reduxjs/toolkit'
 
-type Post = {
+export type Post = {
     id: number
     image: string
     text: string
@@ -14,10 +14,16 @@ type Post = {
 
 type PostState = {
     content: Array<Post> | null
+    isLoading: string
+    error: string | null
+    post: Post | null
 }
 
 const initialState: PostState = {
-    content: null
+    content: null,
+    isLoading: 'idle',
+    error: null,
+    post: null
 }
 
 export const postsSlice = createSlice ({
@@ -26,7 +32,6 @@ export const postsSlice = createSlice ({
     reducers: {
         fetchPosts: (state, action: PayloadAction<Array<Post>>) => {
             state.content = action.payload
-            
         },
         likePost: (state, action: PayloadAction<number>) =>{
             console.log(state.content)
@@ -42,9 +47,24 @@ export const postsSlice = createSlice ({
                     post.id === action.payload ? {...post, like: false} : post
                 )
             }
-        }
-    }
+        },
+        getPost: (state, action: PayloadAction<number>) =>{
+            if(state.isLoading==='pending') {
+                state.isLoading = 'idle'
+            }
+        },
+        getPostSucces: (state, action: PayloadAction<Post>) =>{
+            if(state.isLoading==='pending') {
+                state.isLoading = 'idle'
+                state.post = action.payload
+            }
+        },
+        getPostFailure: (state, action: PayloadAction<string>) =>{
+            state.isLoading = 'idle'
+            state.error = action.payload
+        },
+    },
 })
 
-export const {fetchPosts, likePost, dislikePost} = postsSlice.actions
+export const {fetchPosts, likePost, dislikePost, getPostFailure, getPostSucces, getPost} = postsSlice.actions
 export default postsSlice.reducer

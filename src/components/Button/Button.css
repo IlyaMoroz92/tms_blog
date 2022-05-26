@@ -1,0 +1,73 @@
+.button {
+  border: 1px solid transparent;
+  font-size: 18px;
+  border-radius: 2px;
+  padding: 16px 32px;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.button:hover svg path {
+  fill: #FFFFFF;
+}
+
+.button--primary {
+  color: #FFFFFF;
+  background-color: #2231AA;
+}
+
+.button--primary:hover {
+  background-color: #5360CD;
+}
+
+.button--secondary, .button--with-icon {
+  color: #313037;
+  background-color: #E8E8E8;
+}
+
+.button--secondary:hover {
+  background-color: #DADADA;
+}
+
+.button--secondary2 {
+  color: #FD3419;
+  background-color: inherit;
+}
+
+.button--secondary2:hover {
+  border: 1px solid #E5E5E5;
+}
+
+.button--with-icon:hover, .button--with-icon-like:hover {
+  color: #FFFFFF;
+  background-color: #5360CD;
+}
+
+.button--with-icon-dislike:hover {
+  background-color: #FD3419;
+}
+
+svg ~ .button__text {
+  margin-left: 12px;
+}
+
+.button svg {
+  vertical-align: middle;
+}
+
+.button:disabled {
+  background-color: #E8E8E8;
+  color: #8D8E97;
+  cursor: inherit;
+}
+
+.button:disabled svg path {
+  fill: #8D8E97;
+}
+
+.button--secondary2:disabled {
+  background-color: white;
+  border: none;
+}
+/*# sourceMappingURL=Button.css.map */

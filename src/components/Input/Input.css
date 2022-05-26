@@ -1,0 +1,18 @@
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input__error {
+  color: red;
+  margin: 0;
+}
+
+.input--email, .input--password, .input {
+  width: 544px;
+  height: 56px;
+  font-size: 16px;
+  border-radius: 2px;
+}
+/*# sourceMappingURL=Input.css.map */
