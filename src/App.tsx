@@ -14,7 +14,6 @@ import { usePosts} from './features/posts/usePosts';
 import { signUp} from './features/auth';
 
 
-
 function App() {
 
   const {theme, toggleTheme } = useTheme()
