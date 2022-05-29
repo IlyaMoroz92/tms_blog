@@ -7,8 +7,8 @@ import { ReactComponent as Up} from './components/Button/img/Down.svg'
 import { ReactComponent as More} from './components/Button/img/More.svg' 
 import { Input } from './components/Input';
 import { Header } from './components/Header';
-import {NavLink} from 'react-router-dom'
-import { BrowserRouter } from "react-router-dom";
+/* import {NavLink} from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom"; */
 import { Blog } from "./pages/Blog/blog";
 import  Layout  from './components/Layout/Layout';
 import { Title } from './components/Title';
@@ -16,6 +16,7 @@ import { Likebar } from './components/Likebar';
 import { Footer } from './components/Footer';
 import { Date } from './components/Date';
 import {  Postcard } from './components/Postcard';
+
 
 function App() {
   return (

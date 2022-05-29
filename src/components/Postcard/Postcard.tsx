@@ -21,7 +21,7 @@ type PostCardProps = {
 
 export const Postcard = (props: PostCardProps) => {
     return (
-        <div className={`postcard__container`}>
+        <div className={`postcard__container postcard__container--${props.className}`}>
             <div className={`postcard__content postcard__content--${props.className}`}>
                 <div className={`postcard__textcontent postcard__textcontent--${props.className}`}>
                     <Date  date={props.date}/>
@@ -29,7 +29,7 @@ export const Postcard = (props: PostCardProps) => {
                     <Article text = {props.text}/>
                 </div>
                 <div className={`postcard__picture postcard__picture--${props.className}`}>
-                    <Picture src={props.image} className={`postcard__img postcard__img--${props.className}`}/>
+                    <Picture src={props.image} className={`postcard__img--${props.className}`}/>
                 </div>
             </div>
             <Likebar/>

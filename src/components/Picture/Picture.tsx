@@ -10,7 +10,7 @@ type PictureProps = {
 
 export const Picture = (props: PictureProps) => {
     return (
-        <img className={`picture--${props.className}`} src={props.src} alt={props.alt} />
+        <img className={props.className} src={props.src} alt={props.alt} />
     )
 }
 
