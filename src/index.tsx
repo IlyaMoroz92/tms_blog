@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Blog } from "./pages/Blog/blog";
+import { All } from "./pages/All/all";
 import { SignIn } from "./pages/SignIn/signin";
 import { SignUp } from "./pages/SignUp/signup";
 import { Favorites } from "./pages/Favorites/favorites";
@@ -20,6 +21,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<App />}>
+            <Route path="/" element={<All />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/popular" element={<Popular />} />
           </Route>

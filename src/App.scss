@@ -3,5 +3,63 @@
 
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+.all__blog {
+    display: grid;
+    grid-template-areas:
+    "A  A  C1 "
+    "A  A  C2 "
+    "B1 B2 C3 "
+    "B1 B2 C4 "
+    "B3 B4 C5 "
+    "B3 B4 C6 ";
+}
 
+.grid--0 {
+    grid-area: A;
+}
+
+.grid--1 {
+    grid-area: B1;
+}
+
+.grid--2 {
+    grid-area: B2;
+}
+
+.grid--3 {
+    grid-area: B3;
+}
+
+.grid--4 {
+    grid-area: B4;
+}
+
+.grid--5 {
+    grid-area: C1;
+}
+
+.grid--6 {
+    grid-area: C2;
+}
+
+.grid--7 {
+    grid-area: C3;
+}
+
+.grid--8 {
+    grid-area: C4;
+}
+
+.grid--9 {
+    grid-area: C5;
+}
+
+.grid--10 {
+    grid-area: C6;
+}
