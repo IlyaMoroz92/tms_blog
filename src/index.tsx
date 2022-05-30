@@ -4,29 +4,30 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Blog } from "./pages/Blog/blog";
-import { All } from "./pages/All/all";
-import { SignIn } from "./pages/SignIn/signin";
-import { SignUp } from "./pages/SignUp/signup";
-import { Favorites } from "./pages/Favorites/favorites";
-import { Popular } from "./pages/Popular/popular";
+import { BlogPage } from "./pages/BlogPage/blogPage";
+import { AllPage } from "./pages/AllPage/allPage";
+import { SignInPage } from "./pages/SignInPage/signinPage";
+import { SignUpPage } from "./pages/SignUpPage/signupPage";
+import { FavoritesPage } from "./pages/FavoritesPage/favoritesPage";
+import { PopularPage } from "./pages/PopularPage/popularPage";
 import Layout from "./components/Layout/Layout";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<App />}>
-            <Route path="/" element={<All />} />
-            <Route path="/favorites" element={<Favorites />} />
-            <Route path="/popular" element={<Popular />} />
+            <Route path="/" element={<AllPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+            <Route path="/popular" element={<PopularPage />} />
           </Route>
-          <Route path="signin" element={<SignIn />} />
-          <Route path="signup" element={<SignUp />} />
+          <Route path="signin" element={<SignInPage />} />
+          <Route path="signup" element={<SignUpPage />} />
           <Route
             path="*"
             element={

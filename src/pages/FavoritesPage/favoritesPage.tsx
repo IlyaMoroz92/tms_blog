@@ -1,4 +1,4 @@
-export const Favorites = () => {
+export const FavoritesPage = () => {
     return (
     <>
         <h2>Favorites</h2>

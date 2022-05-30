@@ -1,7 +1,7 @@
 import { Title } from "../../components/Title";
 import { TitleNav } from "../../components/TitleNav";
 
-export const SignUp = () => {
+export const SignUpPage = () => {
     return (
         <>
             <TitleNav  to='/' text='Home'/>

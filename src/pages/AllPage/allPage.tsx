@@ -1,7 +1,7 @@
 import { Postcard } from "../../components/Postcard";
 import {  content } from '../../components/Postcard/content';
 
-export const All = () => {
+export const AllPage = () => {
     return (
         <div className="all__blog">
             {content.map((el, ind) => {

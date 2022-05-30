@@ -9,7 +9,7 @@ import { Input } from './components/Input';
 import { Header } from './components/Header';
 /* import {NavLink} from 'react-router-dom'
 import { BrowserRouter } from "react-router-dom"; */
-import { Blog } from "./pages/Blog/blog";
+import { BlogPage } from "./pages/BlogPage/blogPage";
 import  Layout  from './components/Layout/Layout';
 import { Title } from './components/Title';
 import { Likebar } from './components/Likebar';
@@ -21,7 +21,7 @@ import {  Postcard } from './components/Postcard';
 function App() {
   return (
     <div className="App">
-      <Blog />
+      <BlogPage />
     </div>
   );
 }

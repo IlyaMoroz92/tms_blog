@@ -3,7 +3,7 @@ import { Tabs } from "../../components/Tabs";
 import { Postcard } from "../../components/Postcard";
 import {  content } from '../../components/Postcard/content';
 
-export const Blog = () => {
+export const BlogPage = () => {
     return (
     <>
         <Title text='Blog' className='title'/>
