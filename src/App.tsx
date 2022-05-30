@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className={`App theme--${theme}`}>
-      {posts?.map(post=> {
+      {posts?.map(post => {
         return(
           <div key={post.id}>
             <p>{post.title}</p>
@@ -83,52 +83,6 @@ function App() {
           text='Secondary 2'
           className='secondary2 margin'
         />
-        <Button
-          text='Button with icon'
-          icon={<Bookmark />}
-          className='with-icon margin'
-        />
-        <Button
-          icon={<Down/>}
-          className='with-icon-dislike margin'
-          />
-        <Button
-          icon={<Up />}
-          className='with-icon-like margin'
-          />
-      </div>
-      <div className="buttons_disabled">
-      <Button 
-          text='Primary'
-          className='primary margin'
-          disabled
-          />
-        <Button
-          text='Secondary'
-          className='secondary margin'
-          disabled
-        />
-        <Button
-          text='Secondary 2'
-          className='secondary2 margin'
-          disabled
-        />
-        <Button
-          text='Button with icon'
-          icon={<Bookmark />}
-          className='with-icon margin'
-          disabled
-        />
-        <Button
-          icon={<Down/>}
-          className='with-icon-dislike margin'
-          disabled
-          />
-        <Button
-          icon={<Up />}
-          className='with-icon-like margin'
-          disabled
-          />
       </div>
       <Input
         title='Name'
