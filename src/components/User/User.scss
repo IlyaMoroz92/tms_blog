@@ -1,0 +1,16 @@
+@import "../../styles/_variables";
+
+.user {
+
+    color: white;
+    font-weight: 600;
+    min-width: 200px;
+
+
+    &__abbr {
+        padding: 14px;
+        margin: 0 15px;
+        height: 24px;
+        background-color: $color-primary2;
+    }
+}

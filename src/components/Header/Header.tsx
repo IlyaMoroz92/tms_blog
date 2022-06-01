@@ -5,6 +5,7 @@ import { Input } from '../Input';
 import { ReactComponent as BurgerOpen} from './img/BurgerOpen.svg' 
 import { ReactComponent as BurgerClose} from './img/BurgerClose.svg' 
 import { ReactComponent as Search} from './img/Search.svg' 
+import { User } from "../User";
 
 import './Header.scss'
 
@@ -29,7 +30,7 @@ export const Header = (props: HeaderProps) => {
                     text=''
                     icon={<BurgerOpen />}
                     className='burger header__buttons'
-                /> 
+                />
             </div>
             {isSearchPanelVisible && 
                         <Input
@@ -49,8 +50,7 @@ export const Header = (props: HeaderProps) => {
                     />
                 </div>
                 <div className="header__user">
-                    <span className='header__user--abbr'>AM</span>
-                    <span className='header__user--name'>Artem Malkin</span>
+                    <User text='Ilya Moroz' abbr='IM'/>
                 </div>
             </div>
         </div>

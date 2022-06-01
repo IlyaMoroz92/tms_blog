@@ -27,6 +27,7 @@
 
 .all__blog {
     display: grid;
+    gap: 10px;
     grid-template-areas:
     "A  A  C1 "
     "A  A  C2 "
