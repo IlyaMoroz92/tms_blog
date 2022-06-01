@@ -10,6 +10,7 @@ import { SignInPage } from "./pages/SignInPage/signInPage";
 import { SignUpPage } from "./pages/SignUpPage/signUpPage";
 import { FavoritesPage } from "./pages/FavoritesPage/favoritesPage";
 import { PopularPage } from "./pages/PopularPage/popularPage";
+import { VerifyPage } from "./pages/VerifyPage/verifyPage";
 import Layout from "./components/Layout/Layout";
 
 const root = ReactDOM.createRoot(
@@ -28,6 +29,7 @@ root.render(
           </Route>
           <Route path="signin" element={<SignInPage />} />
           <Route path="signup" element={<SignUpPage />} />
+          <Route path="verify" element={<VerifyPage />} />
           <Route
             path="*"
             element={
