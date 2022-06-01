@@ -6,6 +6,7 @@ import { ReactComponent as BurgerOpen} from './img/BurgerOpen.svg'
 import { ReactComponent as BurgerClose} from './img/BurgerClose.svg' 
 import { ReactComponent as Search} from './img/Search.svg' 
 import { User } from "../User";
+import { Burger } from "../Burger";
 
 import './Header.scss'
 
@@ -53,6 +54,7 @@ export const Header = (props: HeaderProps) => {
                     <User text='Ilya Moroz' abbr='IM'/>
                 </div>
             </div>
+            {/* <Burger/> */}
         </div>
     )
 }

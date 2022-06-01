@@ -16,12 +16,14 @@ import { Likebar } from './components/Likebar';
 import { Footer } from './components/Footer';
 import { Date } from './components/Date';
 import {  Postcard } from './components/Postcard';
+import {  Burger } from './components/Burger';
 
 
 function App() {
   return (
     <div className="App">
       <BlogPage />
+      <Burger/>
     </div>
   );
 }

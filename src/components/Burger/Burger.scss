@@ -1,0 +1,35 @@
+@import "../../styles/_variables";
+
+.burger {
+    
+    width: 236px;
+
+
+    &__user {
+        height: 83px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-primary;
+    }
+
+    &__buttons {
+        height: 960px;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.button--burger {
+    width: 100%;
+    border: 2px solid $color-light;
+    
+    &--theme {
+        width: 50%;
+        border: 2px solid $color-light;
+    }
+}
