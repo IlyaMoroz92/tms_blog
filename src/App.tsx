@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import { Button } from './components/Button';
 import { ReactComponent as Down} from './components/Button/img/Down.svg' 
@@ -16,14 +16,14 @@ import { Likebar } from './components/Likebar';
 import { Footer } from './components/Footer';
 import { Date } from './components/Date';
 import {  Postcard } from './components/Postcard';
-import {  Burger } from './components/Burger';
+
 
 
 function App() {
+  
   return (
     <div className="App">
       <BlogPage />
-      <Burger/>
     </div>
   );
 }

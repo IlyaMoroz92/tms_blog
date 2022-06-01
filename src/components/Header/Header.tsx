@@ -17,7 +17,7 @@ type HeaderProps = {
 }
 
 export const Header = (props: HeaderProps) => {
-
+    const [burgerActive, SetBurgerActive] = useState(false)
     const [isSearchPanelVisible, setIsSearchPanelVisible] = useState(false)
     const toggleVisible = () => {
 
@@ -31,6 +31,7 @@ export const Header = (props: HeaderProps) => {
                     text=''
                     icon={<BurgerOpen />}
                     className='burger header__buttons'
+                    onClick={() => SetBurgerActive(!burgerActive)}
                 />
             </div>
             {isSearchPanelVisible && 
@@ -49,12 +50,18 @@ export const Header = (props: HeaderProps) => {
                         onClick={toggleVisible}
                         className='search header__buttons'
                     />
+                    {/* <Button
+                        text=''
+                        icon={<Search />}
+                        onClick={() => SetBurgerActive(false)}
+                        className='search header__buttons'
+                    /> */}
                 </div>
                 <div className="header__user">
                     <User text='Ilya Moroz' abbr='IM'/>
                 </div>
             </div>
-            {/* <Burger/> */}
+            <Burger active={burgerActive} setActive={SetBurgerActive}/>
         </div>
     )
 }

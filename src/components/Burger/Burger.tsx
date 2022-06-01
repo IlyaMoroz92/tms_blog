@@ -9,11 +9,14 @@ import { ReactComponent as Dark} from './img/Dark.svg'
 type BurgerProps = {
     className?: string
     text?: string
+    active?: boolean
+    setActive?: any
 }
 
 export const Burger = (props: BurgerProps) => {
     return (
-        <div className="burger">
+        
+        <div className={props.active ? 'burger active' : 'burger'}>
             <div className="burger__buttons">
                 <div className="burger__buttons-up">
                     <div className="burger__user"><User text='Ilya Moroz' abbr='IM'/></div>

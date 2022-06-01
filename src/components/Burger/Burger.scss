@@ -1,9 +1,18 @@
 @import "../../styles/_variables";
 
 .burger {
-    
+    z-index: 2;
+    line-height: 0px;
     width: 236px;
+    position: fixed;
+    left: 0;
+    top: 84px;
+    transform: translateX(-100%);
+    transition: all 0.2s;
 
+    &.active {
+        transform: translateX(0);
+    }
 
     &__user {
         height: 83px;
@@ -16,7 +25,7 @@
     }
 
     &__buttons {
-        height: 960px;
+        height: 80vh;
         background-color: #FFFFFF;
         display: flex;
         flex-direction: column;
