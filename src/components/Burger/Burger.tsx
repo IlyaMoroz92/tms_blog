@@ -20,11 +20,15 @@ export const Burger = (props: BurgerProps) => {
     const theme = useAppSelector(state => state.theme.value)
     const dispatch = useAppDispatch()
 
-    const toggleTheme = () => {
-        const newTheme = theme === 'dark' ? 'light' : 'dark'
-        console.log(newTheme)
-        dispatch(setTheme(newTheme))
-    }
+        /* const newTheme = theme === 'dark' ? 'light' : 'dark' */
+        const lightTheme = () => {
+            dispatch(setTheme('light'))
+        }
+        const darkTheme = () => {
+            dispatch(setTheme('dark'))
+        }
+
+
 
     return (
         
@@ -46,12 +50,12 @@ export const Burger = (props: BurgerProps) => {
                     <Button
                         icon={<Light />}
                         className='burger--theme'
-                        onClick={() => console.log('work')}
+                        onClick={lightTheme}
                     />
                     <Button
                         icon={<Dark />}
                         className='burger--theme'
-                        onClick={toggleTheme}
+                        onClick={darkTheme}
                     />
                     </div>
                     <Button

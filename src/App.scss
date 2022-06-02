@@ -2,11 +2,23 @@
     margin: 0;
 }
 
+.container {
+    margin-top: 84px;
+}
+
 .sign__form {
     width: 500px;
     border: 2px solid rgb(201, 201, 201);
     padding: 25px;
     margin: 0 auto;
+}
+
+.header__main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 .theme--dark {
