@@ -5,6 +5,9 @@ import { Button } from "../Button";
 import { ReactComponent as Closed} from './img/Closed.svg' 
 import { ReactComponent as Light} from './img/Light.svg' 
 import { ReactComponent as Dark} from './img/Dark.svg' 
+import { setTheme } from '../../redux/reducers/theme';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+
 
 type BurgerProps = {
     className?: string
@@ -14,6 +17,15 @@ type BurgerProps = {
 }
 
 export const Burger = (props: BurgerProps) => {
+    const theme = useAppSelector(state => state.theme.value)
+    const dispatch = useAppDispatch()
+
+    const toggleTheme = () => {
+        const newTheme = theme === 'dark' ? 'light' : 'dark'
+        console.log(newTheme)
+        dispatch(setTheme(newTheme))
+    }
+
     return (
         
         <div className={props.active ? 'burger active' : 'burger'}>
@@ -34,10 +46,12 @@ export const Burger = (props: BurgerProps) => {
                     <Button
                         icon={<Light />}
                         className='burger--theme'
+                        onClick={() => console.log('work')}
                     />
                     <Button
                         icon={<Dark />}
                         className='burger--theme'
+                        onClick={toggleTheme}
                     />
                     </div>
                     <Button

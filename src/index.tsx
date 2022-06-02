@@ -12,6 +12,8 @@ import { FavoritesPage } from "./pages/FavoritesPage/favoritesPage";
 import { PopularPage } from "./pages/PopularPage/popularPage";
 import { VerifyPage } from "./pages/VerifyPage/verifyPage";
 import Layout from "./components/Layout/Layout";
+import {store} from './redux/store'
+import {Provider} from 'react-redux'
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -19,6 +21,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -41,6 +44,7 @@ root.render(
         </Route>
       </Routes>
     </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

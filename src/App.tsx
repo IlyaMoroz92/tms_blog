@@ -16,13 +16,16 @@ import { Likebar } from './components/Likebar';
 import { Footer } from './components/Footer';
 import { Date } from './components/Date';
 import {  Postcard } from './components/Postcard';
-
+import { setTheme } from './redux/reducers/theme';
+import { useAppDispatch, useAppSelector } from './redux/hooks';
 
 
 function App() {
-  
+  const theme = useAppSelector(state => state.theme.value)
+  /* const dispatch = useAppDispatch() */
+
   return (
-    <div className="App">
+    <div className={`App theme--${theme}`}>
       <BlogPage />
     </div>
   );
