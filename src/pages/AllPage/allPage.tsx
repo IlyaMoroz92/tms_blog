@@ -32,7 +32,7 @@ export const AllPage: any = () => {
     console.log(data)
     return (
         <div className="all__blog">
-            {content.map((el: IPost, ind: number) => {
+            {data.map((el: IPost, ind: number) => {
                     if(ind < 1) {
                         return (
                             <Postcard
@@ -41,7 +41,7 @@ export const AllPage: any = () => {
                                 text={el.text}
                                 image={el.image}
                                 date={el.date}
-                                className={`sizeL grid--${el.ind}`}
+                                className={`sizeL grid--${ind}`}
                             />
                         )} else if(ind < 5) {
                         return (
@@ -63,11 +63,10 @@ export const AllPage: any = () => {
                             />
                         )}
                     }
-                )
-            }
+                )}
         </div>
     );
-    
+}
     /* return (
         <div className="all__blog">
             {content.map((el, ind) => {
@@ -104,4 +103,3 @@ export const AllPage: any = () => {
             )}
         </div>
     ); */
-}

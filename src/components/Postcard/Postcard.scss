@@ -80,6 +80,7 @@
     &__content--sizeS {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     
     &__picture--sizeS {
