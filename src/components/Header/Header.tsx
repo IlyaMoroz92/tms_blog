@@ -42,7 +42,6 @@ export const Header = (props: HeaderProps) => {
                         />
             }
             <div className="header__right">
-                    
                 <div className="header__search">
                     <Button
                         text=''

@@ -27,6 +27,7 @@ function App() {
   return (
     <div className={`App theme--${theme}`}>
       <BlogPage />
+      {/* <Likebar/> */}
     </div>
   );
 }

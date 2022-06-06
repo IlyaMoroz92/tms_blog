@@ -9,19 +9,23 @@ import './Likebar.scss'
 type LikebarProps = {
     className?: string
     onClick?: number
+    like?: number
 }
 
 export const Likebar = (props: LikebarProps) => {
-    const [text, setLike]= useState(0)
+    /* const [text, setLike]= useState(0) */
+    const [like, setLike] = useState(false)
     return (
         <div className= 'likebar'>
             <div className="likebar__left">
                 <Button
                     icon={<Up />}
                     className={`likebar likebar__up--${props.className}`}
-                    onClick={() => setLike(text+1)}
+                    /* onClick={() => setLike(text+1)} */
+                    onClick={() => setLike(true)}
                 />
-                <p className={`likebar__counter likebar__counter--${props.className}`}>{text}</p>
+                {/* <p className={`likebar__counter likebar__counter--${props.className}`}>{text}</p> */}
+                <p className={`likebar__counter likebar__counter--${props.className}`}>{props.like}</p>
                 <Button
                     icon={<Down />}
                     className={`likebar likebar__down--${props.className}`}
