@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 
 
 interface IPost {
-    /* results?: any */
     id?: number;
     image?: string;
     text?: string;
@@ -29,7 +28,6 @@ export const AllPage: any = () => {
         }
         fetchData()
     }, [])
-    console.log(data)
     return (
         <div className="all__blog">
             {data.map((el: IPost, ind: number) => {
@@ -67,39 +65,3 @@ export const AllPage: any = () => {
         </div>
     );
 }
-    /* return (
-        <div className="all__blog">
-            {content.map((el, ind) => {
-                if(ind < 1) {
-                return (
-                    <Postcard
-                        key={ind}
-                        title={el.title}
-                        text={el.text}
-                        image={el.image}
-                        date={el.date}
-                        className={`sizeL grid--${ind}`}
-                    />
-                )} else if(ind < 5) {
-                return (
-                    <Postcard 
-                        key={ind}
-                        title={el.title}
-                        image={el.image}
-                        date={el.date}
-                        className={`sizeM grid--${ind}`}
-                    />
-                )} else if(ind < 11) {
-                return (
-                    <Postcard
-                        key={ind}
-                        title={el.title}
-                        image={el.image}
-                        date={el.date}
-                        className={`sizeS grid--${ind}`}
-                    />
-                )}
-                }
-            )}
-        </div>
-    ); */
