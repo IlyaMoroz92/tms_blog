@@ -1,10 +1,10 @@
 import {createSlice, type PayloadAction} from '@reduxjs/toolkit'
 
-interface ThemeState {
+interface IThemeState {
     value: string
 }
 
-const initialState: ThemeState = {
+const initialState: IThemeState = {
     value: 'light'
 }
 

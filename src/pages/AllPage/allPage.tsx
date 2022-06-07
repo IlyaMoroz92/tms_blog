@@ -16,6 +16,7 @@ interface IPost {
     dislike?: boolean;
     favorit?: boolean;
     ind?: number
+    likeCount?: number | undefined
 }
 
 
@@ -25,23 +26,19 @@ export const AllPage: any = () => {
     console.log(data)
 
     const allPosts = async () => {
-            const response = await fetch('https://studapi.teachmeskills.by/blog/posts/?limit=12')
+            const response = await fetch('https://studapi.teachmeskills.by/blog/posts/?limit=70')
             const responseFormat = await response.json();
-            console.log(responseFormat);
-            
+
             return responseFormat.results
     }
-   
+
     useEffect(() => {
         if (data === null) {
-            allPosts() 
-                .then((data: any) => {dispatch(setData(data))})        
+            allPosts()
+                .then((data: any) => {dispatch(setData(data))})
         }
     }, [])
-    useEffect(() => {
- console.log(data);
- 
-    }, [data])
+
     return (
         <div className="all__blog">
             {data?.map((el: IPost, ind: number) => {
@@ -54,6 +51,7 @@ export const AllPage: any = () => {
                             image={el.image}
                             date={el.date}
                             className={`sizeL grid--${ind}`}
+                            likeCount={el.id}
                         />
                     )} else if(ind < 5) {
                     return (
@@ -63,6 +61,7 @@ export const AllPage: any = () => {
                             image={el.image}
                             date={el.date}
                             className={`sizeM grid--${ind}`}
+                            likeCount={el.id}
                         />
                     )} else if(ind < 11) {
                     return (
@@ -72,6 +71,7 @@ export const AllPage: any = () => {
                             image={el.image}
                             date={el.date}
                             className={`sizeS grid--${ind}`}
+                            likeCount={el.id}
                         />
                     )}
                 }

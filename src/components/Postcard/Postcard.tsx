@@ -16,6 +16,7 @@ type PostCardProps = {
     id?: number | undefined
     author?: string
     lesson_num?: number
+    likeCount?: number | undefined
 }
 
 
@@ -32,7 +33,7 @@ export const Postcard = (props: PostCardProps) => {
                     <Picture src={props.image} className={`postcard__img--${props.className}`}/>
                 </div>
             </div>
-            <Likebar/>
+            <Likebar /* props={props} */likeCount={props.id}/>
         </div>
     )
 }
