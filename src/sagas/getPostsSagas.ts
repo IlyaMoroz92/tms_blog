@@ -9,11 +9,13 @@ type Posts = {
 }
 
 export function* fetchPosts() {
+
     try {
         const response: Response = yield fetch(`https://studapi.teachmeskills.by/blog/posts/?limit=1000&offset=0`)
 
         const posts: Posts = yield(response.json())
-
+        console.log(posts);
+        
         yield put(fetchPostsSuccess(posts.results))
 
     }

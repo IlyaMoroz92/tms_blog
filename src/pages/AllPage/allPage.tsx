@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { dataSlice, setData } from '../../redux/reducers/data';
 import { useTheme } from '../../features/theme/useTheme'
+import { usePosts } from '../../features/getPosts'
 
 
 interface IPost {
@@ -21,30 +22,34 @@ interface IPost {
     likeCount?: number | undefined
 }
 
-
 export const AllPage: any = () => {
-
-    const theme = useTheme()
-    const data = useAppSelector(state => state.data.value)
     const dispatch = useAppDispatch()
-    console.log(data)
+
+    const {posts} = usePosts()
+    useEffect( () => console.log(posts))
+
+    
+    const theme = useTheme()
+/*     const data = useAppSelector(state => state.data.value)
+
 
     const allPosts = async () => {
             const response = await fetch('https://studapi.teachmeskills.by/blog/posts/?limit=70')
             const responseFormat = await response.json();
             return responseFormat.results
-    }
+    } */
 
-    useEffect(() => {
+/*     useEffect(() => {
         if (data === null) {
             allPosts()
                 .then((data: any) => {dispatch(setData(data))})
         }
-    }, [])
+    }, []) */
+
 
     return (
         <div className="all__blog">
-            {data?.map((el: IPost, ind: number) => {
+            {posts?.map((el: IPost, ind: number) => {
                 if(ind < 1) {
                     return (
                         <Postcard
