@@ -3,6 +3,8 @@ import {  content } from '../../components/Postcard/content';
 import { useState, useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { dataSlice, setData } from '../../redux/reducers/data';
+import { useTheme } from '../../features/theme/useTheme'
+
 
 interface IPost {
     id?: number;
@@ -21,6 +23,8 @@ interface IPost {
 
 
 export const AllPage: any = () => {
+
+    const theme = useTheme()
     const data = useAppSelector(state => state.data.value)
     const dispatch = useAppDispatch()
     console.log(data)

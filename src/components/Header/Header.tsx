@@ -17,6 +17,10 @@ type HeaderProps = {
 }
 
 export const Header = (props: HeaderProps) => {
+
+
+
+
     const [burgerActive, SetBurgerActive] = useState(false)
     const [isSearchPanelVisible, setIsSearchPanelVisible] = useState(false)
     
