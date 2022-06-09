@@ -28,7 +28,6 @@ export const AllPage: any = () => {
     const allPosts = async () => {
             const response = await fetch('https://studapi.teachmeskills.by/blog/posts/?limit=70')
             const responseFormat = await response.json();
-
             return responseFormat.results
     }
 
