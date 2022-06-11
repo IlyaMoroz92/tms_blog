@@ -11,6 +11,7 @@ import { SignUpPage } from "./pages/SignUpPage/signupPage";
 import { FavoritesPage } from "./pages/FavoritesPage/favoritesPage";
 import { PopularPage } from "./pages/PopularPage/popularPage";
 import { VerifyPage } from "./pages/VerifyPage/verifyPage";
+import { PostPage } from "./pages/PostPage/postPage";
 import Layout from "./components/Layout/Layout";
 import {store} from './redux/store'
 import {Provider} from 'react-redux'
@@ -25,6 +26,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
+        <Route path="/post/:id" element={<PostPage />} />
           <Route path="/" element={<App />}>
             <Route path="/" element={<AllPage />} />
             <Route path="/favorites" element={<FavoritesPage />} />

@@ -45,12 +45,31 @@ export const postsSlice = createSlice({
             state.isLoading = 'idle'
             state.error = action.payload
         },
+        fetchPost: (state, action:PayloadAction<number>) => {
+            state.post = null
+            if(state.isLoading === 'idle'){
+                state.isLoading = 'pending'
+            }
+        },
+        fetchPostSuccess:(state, action:PayloadAction<IPost>) => {
+            if(state.isLoading === 'pending'){
+                state.isLoading = 'idle'
+                state.post = action.payload
+            }
+        },
+        fetchPostFailure: (state, action: PayloadAction<string>) => {
+            state.isLoading = 'idle'
+            state.error = action.payload
+        },
     },
 })
 
 export const { 
     fetchPosts, 
     fetchPostsSuccess, 
-    fetchPostsFailure} = postsSlice.actions
+    fetchPostsFailure,
+    fetchPost, 
+    fetchPostSuccess, 
+    fetchPostFailure} = postsSlice.actions
 
 export default postsSlice.reducer
