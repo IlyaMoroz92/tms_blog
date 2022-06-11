@@ -19,9 +19,9 @@ type BurgerProps = {
 export const Burger = (props: BurgerProps) => {
 
     const {theme, lightTheme, darkTheme, toggleTheme} = useTheme()
-    console.log(theme);
+    /* console.log(theme);
         
-    const dispatch = useAppDispatch()
+    const dispatch = useAppDispatch() */
 
 
 
