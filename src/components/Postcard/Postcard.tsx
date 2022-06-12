@@ -6,6 +6,7 @@ import { Article } from '../Article';
 import { Likebar } from '../Likebar';
 import { Picture } from '../Picture';
 import './Postcard.scss'
+import { Link } from 'react-router-dom';
 
 type PostCardProps = {
     title?: string
@@ -26,11 +27,15 @@ export const Postcard = (props: PostCardProps) => {
             <div className={`postcard__content postcard__content--${props.className}`}>
                 <div className={`postcard__textcontent postcard__textcontent--${props.className}`}>
                     <Date  date={props.date}/>
-                    <Title  className={`postcard__title postcard__title--${props.className}`} text={props.title}/>
+                    <Link to={`/post/${props.id}`}>
+                        <Title  className={`postcard__title postcard__title--${props.className}`} text={props.title}/>
+                    </Link>
                     <Article text = {props.text}/>
                 </div>
                 <div className={`postcard__picture postcard__picture--${props.className}`}>
-                    <Picture src={props.image} className={`postcard__img--${props.className}`}/>
+                    <Link to={`/post/${props.id}`}>
+                        <Picture src={props.image} className={`postcard__img--${props.className}`}/>
+                    </Link>
                 </div>
             </div>
             <Likebar /* props={props} */likeCount={props.id}/>

@@ -60,6 +60,7 @@ export const AllPage: any = () => {
                             date={el.date}
                             className={`sizeL grid--${ind}`}
                             likeCount={el.id}
+                            id={el.id}
                         />
                     )} else if(ind < 5) {
                     return (
@@ -70,6 +71,7 @@ export const AllPage: any = () => {
                             date={el.date}
                             className={`sizeM grid--${ind}`}
                             likeCount={el.id}
+                            id={el.id}
                         />
                     )} else if(ind < 11) {
                     return (
@@ -80,6 +82,7 @@ export const AllPage: any = () => {
                             date={el.date}
                             className={`sizeS grid--${ind}`}
                             likeCount={el.id}
+                            id={el.id}
                         />
                     )}
                 }

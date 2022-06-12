@@ -7,6 +7,7 @@ import { useTheme } from '../../features/theme/useTheme'
 import { usePosts } from '../../features/getPosts'
 import { useParams } from "react-router-dom"
 import { IPost } from '../../features/getPosts/postsSlice'
+import { TitleNav } from '../../components/TitleNav'
 
 export const PostPage: any = () => {
     const dispatch = useAppDispatch()
@@ -23,13 +24,15 @@ export const PostPage: any = () => {
 
     return (
         <div className="all__blog">
+            <TitleNav  to='/' text='Home'/>
             <Postcard
                 title={post?.title}
                 text={post?.text}
                 image={post?.image}
-                date={post?.date}
-                className={``}
+                /* date={post?.date} */
+                className='post'
                 likeCount={post?.id}
+                id={post?.id}
             />
         </div>
     );
