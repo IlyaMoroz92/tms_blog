@@ -8,7 +8,6 @@ export function* fetchPost(action: PayloadAction<number>) {
         const response: Response = yield fetch(`https://studapi.teachmeskills.by/blog/posts/${action.payload}`)
 
         const post: IPost = yield(response.json())
-        console.log(post);
         
         yield put(fetchPostSuccess(post))
 

@@ -15,11 +15,11 @@ interface IPost {
     lesson_num?: number;
     title?: string;
     author?: number;
-    like?: boolean;
-    dislike?: boolean;
-    favorit?: boolean;
+    like?: boolean| undefined
+/*     dislike?: boolean | undefined
+    bookmark?: boolean| undefined */
     ind?: number
-    likeCount?: number | undefined
+    /* likeCount?: number | undefined */
 }
 
 export const AllPage: any = () => {
@@ -28,24 +28,7 @@ export const AllPage: any = () => {
     const {posts} = usePosts()
     useEffect( () => console.log(posts))
 
-    
     const theme = useTheme()
-/*     const data = useAppSelector(state => state.data.value)
-
-
-    const allPosts = async () => {
-            const response = await fetch('https://studapi.teachmeskills.by/blog/posts/?limit=70')
-            const responseFormat = await response.json();
-            return responseFormat.results
-    } */
-
-/*     useEffect(() => {
-        if (data === null) {
-            allPosts()
-                .then((data: any) => {dispatch(setData(data))})
-        }
-    }, []) */
-
 
     return (
         <div className="all__blog">
@@ -59,7 +42,7 @@ export const AllPage: any = () => {
                             image={el.image}
                             date={el.date}
                             className={`sizeL grid--${ind}`}
-                            likeCount={el.id}
+                            /* likeCount={el.id} */
                             id={el.id}
                         />
                     )} else if(ind < 5) {
@@ -70,7 +53,7 @@ export const AllPage: any = () => {
                             image={el.image}
                             date={el.date}
                             className={`sizeM grid--${ind}`}
-                            likeCount={el.id}
+                            /* likeCount={el.id} */
                             id={el.id}
                         />
                     )} else if(ind < 11) {
@@ -81,7 +64,7 @@ export const AllPage: any = () => {
                             image={el.image}
                             date={el.date}
                             className={`sizeS grid--${ind}`}
-                            likeCount={el.id}
+                            /* likeCount={el.id} */
                             id={el.id}
                         />
                     )}

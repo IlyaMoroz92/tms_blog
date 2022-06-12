@@ -8,6 +8,6 @@ type ArticleProps = {
 
 export const Article = (props: ArticleProps) => {
     return (
-        <p className={`article ${props.className}`}>{props.text}</p>
+        <p className={`article article--${props.className}`}>{props.text}</p>
     )
 }

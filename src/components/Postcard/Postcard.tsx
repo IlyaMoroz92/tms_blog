@@ -30,7 +30,7 @@ export const Postcard = (props: PostCardProps) => {
                     <Link to={`/post/${props.id}`}>
                         <Title  className={`postcard__title postcard__title--${props.className}`} text={props.title}/>
                     </Link>
-                    <Article text = {props.text}/>
+                    <Article text = {props.text} className={props.className}/>
                 </div>
                 <div className={`postcard__picture postcard__picture--${props.className}`}>
                     <Link to={`/post/${props.id}`}>
@@ -38,7 +38,7 @@ export const Postcard = (props: PostCardProps) => {
                     </Link>
                 </div>
             </div>
-            <Likebar /* props={props} */likeCount={props.id}/>
+            <Likebar postId={props.id}/>
         </div>
     )
 }

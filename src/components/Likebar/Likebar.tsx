@@ -8,62 +8,61 @@ import './Likebar.scss'
 import { useDispatch, useSelector } from "react-redux"
 import { setBookmark, setDislike, setLike } from '../../redux/reducers/likebar'
 import { useAppSelector } from '../../redux/hooks';
+import { usePosts } from '../../features/getPosts';
 
 
-type LikebarProps = {
+
+/* type LikebarProps = {
     id?: any
     className?: string
-    onClick?: number
+    onClick?: number 
     bookmarkActive?: boolean
     likeActive?: boolean
     dislikeActive?: boolean
     likeCount?: number
+} */
+
+type LikebarProps = {
+    postId?: number | undefined
 }
 
-export const Likebar = (props: LikebarProps) => {
+export const Likebar = ({postId}: LikebarProps) => {
 
-    
-    const dispatch = useDispatch()
-    
-    function bookmarkID() {
-        console.log(props)
-        dispatch(setBookmark(props.id))
-    }
+    const {onLikePost, onDislikePost, onBookmarkPost, statePost } = usePosts()
 
-    function dislikeID() {
-        dispatch(setDislike(props.id))
-    }
+    const id = Number(postId);
 
-    function likeID() {
-        dispatch(setLike(props.id))
-    }
+    const postInfo = statePost(id)
+    console.log(postInfo);
+
 
     return (
         <div className= 'likebar'>
             <div className="likebar__left">
                 <Button
-                    icon={<Up />}
-                    className={`likebar likebar__up--${props.className}`}
-                    /* onClick={() => setLike(text+1)} */
-                    onClick={likeID}
+                    /* icon={<Up />} */
+                    icon={postInfo?.like ? <More /> : <Up />} 
+                    className={`likebar`}
+                    onClick={() => onLikePost(id)}
                 />
-                {/* <p className={`likebar__counter likebar__counter--${props.className}`}>{text}</p> */}
-                <p className={`likebar__counter likebar__counter--${props.className}`}>{props.likeCount}</p>
+                <p className={`likebar__counter`}>{id}</p>
                 <Button
-                    icon={<Down />}
-                    className={`likebar likebar__down--${props.className}`}
-                    onClick={dislikeID}
+                    icon={postInfo?.like === false ? <More /> : <Down />} 
+                    /* icon={<Down />} */
+                    className={`likebar`}
+                    onClick={() => onDislikePost(id)}
                 />
             </div>
             <div className="likebar__right">
                 <Button
-                    icon={<Bookmark />}
-                    className={`likebar likebar__bookmark--${props.className}`}
-                    onClick={bookmarkID}
+                    icon={postInfo?.bookmark  ? <More /> : <Bookmark />} 
+                    /* icon={<Bookmark />} */
+                    className={`likebar`}
+                    onClick={() => onBookmarkPost(id)}
                 />
                 <Button
                     icon={<More />}
-                    className={`likebar likebar__more--${props.className}`}
+                    className={`likebar`}
                 />
             </div>
         </div>

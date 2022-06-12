@@ -8,6 +8,7 @@ import { usePosts } from '../../features/getPosts'
 import { useParams } from "react-router-dom"
 import { IPost } from '../../features/getPosts/postsSlice'
 import { TitleNav } from '../../components/TitleNav'
+import { Link } from 'react-router-dom'
 
 export const PostPage: any = () => {
     const dispatch = useAppDispatch()
@@ -24,7 +25,9 @@ export const PostPage: any = () => {
 
     return (
         <div className="all__blog">
-            <TitleNav  to='/' text='Home'/>
+            <p>
+                <Link  to='/'>Home</Link>
+            </p>
             <Postcard
                 title={post?.title}
                 text={post?.text}

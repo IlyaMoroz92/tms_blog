@@ -9,7 +9,7 @@ export interface IPost  {
     title: string,
     author: number,
     like?: boolean,
-    favorite?: boolean,
+    bookmark?: boolean,
 }
 
 interface IPostsState {
@@ -61,6 +61,21 @@ export const postsSlice = createSlice({
             state.isLoading = 'idle'
             state.error = action.payload
         },
+        likePost: (state, action: PayloadAction<number>) => {
+            if(state.content) {
+                state.content = state.content.map(post => post.id === action.payload ? {...post, like: !post.like ? true : undefined} : post)
+            }
+        },
+        dislikePost: (state, action: PayloadAction<number>) => {
+            if(state.content) {
+                state.content = state.content.map(post => post.id === action.payload ? {...post, like: post.like || post.like === undefined ? false : undefined} : post)
+            }
+        },
+        bookmarkPost: (state, action: PayloadAction<number>) => {
+            if(state.content) {
+                state.content = state.content.map(post => post.id === action.payload ? {...post, bookmark: !post.bookmark} : post)
+            }
+        },
     },
 })
 
@@ -70,6 +85,9 @@ export const {
     fetchPostsFailure,
     fetchPost, 
     fetchPostSuccess, 
-    fetchPostFailure} = postsSlice.actions
+    fetchPostFailure,
+    likePost,
+    dislikePost,
+    bookmarkPost} = postsSlice.actions
 
 export default postsSlice.reducer
