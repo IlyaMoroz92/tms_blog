@@ -1,3 +1,5 @@
+@import "../../styles/_variables";
+
 .likebar {
     display: flex;
     flex-direction: row;
@@ -35,4 +37,12 @@
     line-height: 24px;
     font-size: 16px;
     font-weight: 700;
+}
+
+.dislike * {
+    fill: red;
+}
+
+.like * {
+    fill: $color-primary
 }
