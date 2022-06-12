@@ -1,9 +1,4 @@
 import { Postcard } from "../../components/Postcard";
-import {  content } from '../../components/Postcard/content';
-import { useState, useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../../redux/hooks';
-import { dataSlice, setData } from '../../redux/reducers/data';
-import { useTheme } from '../../features/theme/useTheme'
 import { usePosts } from '../../features/getPosts'
 
 
@@ -16,19 +11,12 @@ interface IPost {
     title?: string;
     author?: number;
     like?: boolean| undefined
-/*     dislike?: boolean | undefined
-    bookmark?: boolean| undefined */
     ind?: number
-    /* likeCount?: number | undefined */
 }
 
 export const AllPage: any = () => {
-    const dispatch = useAppDispatch()
 
     const {posts} = usePosts()
-    useEffect( () => console.log(posts))
-
-    const theme = useTheme()
 
     return (
         <div className="all__blog">
@@ -42,7 +30,6 @@ export const AllPage: any = () => {
                             image={el.image}
                             date={el.date}
                             className={`sizeL grid--${ind}`}
-                            /* likeCount={el.id} */
                             id={el.id}
                         />
                     )} else if(ind < 5) {
@@ -53,7 +40,6 @@ export const AllPage: any = () => {
                             image={el.image}
                             date={el.date}
                             className={`sizeM grid--${ind}`}
-                            /* likeCount={el.id} */
                             id={el.id}
                         />
                     )} else if(ind < 11) {
@@ -64,7 +50,6 @@ export const AllPage: any = () => {
                             image={el.image}
                             date={el.date}
                             className={`sizeS grid--${ind}`}
-                            /* likeCount={el.id} */
                             id={el.id}
                         />
                     )}

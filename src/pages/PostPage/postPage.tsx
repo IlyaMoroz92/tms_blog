@@ -1,20 +1,12 @@
 import { Postcard } from "../../components/Postcard";
-import {  content } from '../../components/Postcard/content';
-import { useState, useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../../redux/hooks';
-import { dataSlice, setData } from '../../redux/reducers/data';
-import { useTheme } from '../../features/theme/useTheme'
+import { useEffect } from 'react'
 import { usePosts } from '../../features/getPosts'
 import { useParams } from "react-router-dom"
-import { IPost } from '../../features/getPosts/postsSlice'
-import { TitleNav } from '../../components/TitleNav'
 import { Link } from 'react-router-dom'
 
 export const PostPage: any = () => {
-    const dispatch = useAppDispatch()
 
     const {posts, getPost, post} = usePosts()
-
     const { id } = useParams();
     const idPost = Number(id)
 
@@ -32,7 +24,6 @@ export const PostPage: any = () => {
                 title={post?.title}
                 text={post?.text}
                 image={post?.image}
-                /* date={post?.date} */
                 className='post'
                 likeCount={post?.id}
                 id={post?.id}

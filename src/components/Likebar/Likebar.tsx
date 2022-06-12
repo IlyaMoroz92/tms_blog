@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Button } from '../Button';
 import { ReactComponent as Down} from '../Button/img/Down.svg' 
 import { ReactComponent as Bookmark} from '../Button/img/Bookmark.svg' 
@@ -6,9 +5,6 @@ import { ReactComponent as Up} from '../Button/img/Up.svg'
 import { ReactComponent as BookmarkActive} from '../Button/img/BookmarkActive.svg'  
 import { ReactComponent as More} from '../Button/img/More.svg' 
 import './Likebar.scss'
-import { useDispatch, useSelector } from "react-redux"
-import { setBookmark, setDislike, setLike } from '../../redux/reducers/likebar'
-import { useAppSelector } from '../../redux/hooks';
 import { usePosts } from '../../features/getPosts';
 
 type LikebarProps = {

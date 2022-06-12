@@ -4,7 +4,6 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { BlogPage } from "./pages/BlogPage/blogPage";
 import { AllPage } from "./pages/AllPage/allPage";
 import { SignInPage } from "./pages/SignInPage/signinPage";
 import { SignUpPage } from "./pages/SignUpPage/signupPage";

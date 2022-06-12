@@ -1,6 +1,4 @@
-import { Button } from '../Button';
 import { Date } from '../Date';
-import { Footer } from '../Footer';
 import { Title } from '../Title';
 import { Article } from '../Article';
 import { Likebar } from '../Likebar';
@@ -18,6 +16,7 @@ type PostCardProps = {
     author?: string
     lesson_num?: number
     likeCount?: number | undefined
+    postId?: number
 }
 
 
