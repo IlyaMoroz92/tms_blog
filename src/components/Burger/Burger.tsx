@@ -7,7 +7,7 @@ import { ReactComponent as Light} from './img/Light.svg'
 import { ReactComponent as Dark} from './img/Dark.svg' 
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { useTheme } from '../../features/theme/useTheme'
-
+import { Link } from 'react-router-dom';
 
 type BurgerProps = {
     className?: string
@@ -32,10 +32,12 @@ export const Burger = (props: BurgerProps) => {
             <div className="burger__buttons">
                 <div className="burger__buttons-up">
                     <div className="burger__user"><User text='Ilya Moroz' abbr='IM'/></div>
-                    <Button
-                        text='Home'
-                        className='burger'
-                    />
+                    <Link to='/'>
+                        <Button
+                            text='Home'
+                            className='burger'
+                        />
+                    </Link>
                     <Button
                         text='Add post'
                         className='burger'
