@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Input.scss'
+import React, { ForwardedRef } from 'react';
 
 type InputProps = {
     title?: string
@@ -9,29 +10,33 @@ type InputProps = {
     type?: React.HTMLInputTypeAttribute
     onChange?: (event:any) => void
     errorMessage?: string
+    value?: any
+    ref?: string
 }
 
-export const Input = (props: InputProps) => {
-    const [inputValue, setInputValue] = useState('')
-    const [error, setError] = useState('')
-    const handleChange = (event: any) => {
+export const Input = React.forwardRef(({title, placeholder, disabled, className, onChange, value, errorMessage, type}: InputProps, ref: ForwardedRef<any>) => {
+    /* const [inputValue, setInputValue] = useState('')
+    const [error, setError] = useState('') */
+/*     const handleChange = (event: any) => {
         setInputValue(event.target.value)
-        if(event.target.value.length < 5 && props.type === 'password') {
-            setError(`${props.errorMessage}`);
+        if(event.target.value.length < 5 && type === 'password') {
+            setError(`${errorMessage}`);
         } else {
             setError('');
         }
-    }
+    } */
     return (
-        <div className={`input__div input__div--${props.className}`}> {props.title}
+        <div className={`input__div input__div--${className}`}> {title}
             <input
-                className={`input input--${props.className}`}
-                type={props.type}
-                onChange={handleChange}
-                placeholder={props.placeholder}
-                disabled={props.disabled}
+                className={`input input--${className}`}
+                type={type}
+                onChange={onChange}
+                placeholder={placeholder}
+                disabled={disabled}
+                value={value}
+                ref={ref}
             />
-            {props.type === 'password' && <p className={`input__error input__error--${props.className}`}>{error}</p>}
+            {type === 'password' && <p className={`input__error input__error--${className}`}>{errorMessage}</p>}
         </div>
     )
-}
+})
