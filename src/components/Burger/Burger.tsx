@@ -9,14 +9,16 @@ import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { useTheme } from '../../features/theme/useTheme'
 import { Link } from 'react-router-dom';
 
+
 type BurgerProps = {
     className?: string
-    text?: string
+    text?: string | null
     active?: boolean
     setActive?: any
 }
 
 export const Burger = (props: BurgerProps) => {
+
 
     const {theme, lightTheme, darkTheme, toggleTheme} = useTheme()
     /* console.log(theme);
@@ -31,7 +33,7 @@ export const Burger = (props: BurgerProps) => {
         <div className={props.active ? 'burger active' : 'burger'}>
             <div className="burger__buttons">
                 <div className="burger__buttons-up">
-                    <div className="burger__user"><User text='Ilya Moroz' abbr='IM'/></div>
+                    <div className="burger__user"><User /* text={userInfo} */ abbr='IM'/></div>
                     <Link to='/'>
                         <Button
                             text='Home'

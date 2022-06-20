@@ -64,6 +64,7 @@ export const SignUpPage = () => {
         }
     }, [auth.error])
 
+
     useEffect(() => {
         const focusName = () => setErrorName('')
         const focusEmail = () => setErrorEmail('')
@@ -91,10 +92,6 @@ export const SignUpPage = () => {
         setErrorName('');
     }, [valueName])
 
-
-
-
-
     return (
         <>
             <TitleNav  to='/' text='Back to home'/>
@@ -107,7 +104,7 @@ export const SignUpPage = () => {
                     placeholder='Введите имя'
                     onChange={changeInputName}
                     disabled={false}
-                    value={inputName}
+                    value={valueName}
                     ref={inputName}
                     errorMessage={errorName}
                 />
@@ -118,7 +115,7 @@ export const SignUpPage = () => {
                     placeholder='Введите email'
                     onChange={changeInputEmail}
                     disabled={false}
-                    value={inputEmail}
+                    value={valueEmail}
                     ref={inputEmail}
                     errorMessage={errorEmail}
                 />
@@ -129,7 +126,7 @@ export const SignUpPage = () => {
                     placeholder='Введите пароль'
                     onChange={changeInputPassword}
                     disabled={false}
-                    value={inputPassword}
+                    value={valuePassword}
                     ref={inputPassword}
                     errorMessage={errorPassword}
                 />
@@ -140,7 +137,7 @@ export const SignUpPage = () => {
                     placeholder='Повторите пароль'
                     onChange={changeInputConfirmPassword}
                     disabled={false}
-                    value={inputConfirmPassword}
+                    value={valueConfirmPassword}
                     ref={inputConfirmPassword}
                     errorMessage={errorConfirmPassword}
                 />
