@@ -9,11 +9,10 @@ type UserProps = {
     text?: string
     abbr?: string
 }
- 
+
 export const User = (props: UserProps) => {
 
     const { userInfo } = useUserInfo();
-    console.log(userInfo);
     
     return (
         <div className='user'>

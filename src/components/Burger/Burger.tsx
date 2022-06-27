@@ -33,7 +33,7 @@ export const Burger = (props: BurgerProps) => {
         <div className={props.active ? 'burger active' : 'burger'}>
             <div className="burger__buttons">
                 <div className="burger__buttons-up">
-                    <div className="burger__user"><User /* text={userInfo} */ abbr='IM'/></div>
+                    <div className="burger__user"><User /* text={userInfo} *//></div>
                     <Link to='/'>
                         <Button
                             text='Home'
